@@ -27,10 +27,12 @@
 .jumbotron h1{
     font-size: 10em;;
     color: rgb(255, 255, 255);
+    font-family: 'Anton', sans-serif;
 }
 .jumbotron h3{
     font-size: 2em;
     color: white;
+    font-family: 'Kavivanar', cursive;
 }
 .jumbotron{
     padding-top: 200px;
@@ -38,6 +40,7 @@
 }
 .jumbotron .col-xs-10{
     color: white;
+    font-family: 'Kavivanar', cursive;
 }
 .learn_more{
     border: ridge white 2px;
@@ -45,6 +48,7 @@
     padding: 10px;
     padding-left: 30px;
     padding-right: 30px;
+    font-family: 'Kavivanar', cursive;
 }
 
 .scrolled{
@@ -59,10 +63,12 @@
     font-size: 5em;
     color: rgb(252, 194, 6);
     text-shadow: 0 0 10px black;
+    font-family: 'Anton', sans-serif;
 }
 #second h3{
     font-size: 3em;
     text-shadow: 0 0 10px wheat;
+    font-family: 'Kavivanar', cursive;
 }
 #third{
     height: 100vh;

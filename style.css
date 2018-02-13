@@ -13,7 +13,7 @@
     min-height: 110vh; 
     background: #00bf8f;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to bottom, #00151060, #00bf8f65),url('images/bcgnd.png') no-repeat center;  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to bottom, #00151069, #00bf8f6b),url('images/bcgnd.png') no-repeat center; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to bottom, #00151069, #00bf8f6b),url('images/bcgnd.png') no-repeat center ; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 #first button{
     color: antiquewhite;
@@ -76,6 +76,22 @@
 .faqs{
     cursor: pointer;
 }
-.collapse{
-    border-top: 2px brown;
+
+@media all and (max-width:768px){
+    #second h3{
+        font-size: 1.2em;
+        text-shadow: 0 0 10px wheat;
+        font-family: 'Kavivanar', cursive;
+}
+.jumbotron h1{
+    font-size: 6em;;
+    color: rgb(255, 255, 255);
+    font-family: 'Anton', sans-serif;
+}
+.learn_more{
+   display: none;
+}
+ul li:hover{
+    background: rgba(221, 220, 220, 0.404)
+}
 }

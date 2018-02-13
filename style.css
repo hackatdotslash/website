@@ -1,0 +1,82 @@
+.navbar button{
+    margin: 10px;
+    border-radius: 12px;
+    height: 40px;
+    background: transparent;
+}
+.navbar{
+    background: transparent;
+    border-bottom: none;
+}
+
+#first{
+    min-height: 110vh; 
+    background: #00bf8f;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #00151060, #00bf8f65),url('images/bcgnd.png') no-repeat center;  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #00151069, #00bf8f6b),url('images/bcgnd.png') no-repeat center; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+#first button{
+    color: antiquewhite;
+}
+#first button.btn-active{
+    color: #00bf8f;
+    background-color: black;
+}
+
+
+.jumbotron h1{
+    font-size: 10em;;
+    color: rgb(255, 255, 255);
+    font-family: 'Anton', sans-serif;
+}
+.jumbotron h3{
+    font-size: 2em;
+    color: white;
+    font-family: 'Kavivanar', cursive;
+}
+.jumbotron{
+    padding-top: 200px;
+    background: transparent;
+}
+.jumbotron .col-xs-10{
+    color: white;
+    font-family: 'Kavivanar', cursive;
+}
+.learn_more{
+    border: ridge white 2px;
+    background: transparent;
+    padding: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    font-family: 'Kavivanar', cursive;
+}
+
+.scrolled{
+    background: #00b9bf8c;
+}
+
+#second {
+    height: 100vh;
+    background: url("images/map.png") no-repeat right ;
+}
+#second h1{
+    font-size: 5em;
+    color: rgb(252, 194, 6);
+    text-shadow: 0 0 10px black;
+    font-family: 'Anton', sans-serif;
+}
+#second h3{
+    font-size: 3em;
+    text-shadow: 0 0 10px wheat;
+    font-family: 'Kavivanar', cursive;
+
+}
+#third{
+    height: 100vh;
+}
+.faqs{
+    cursor: pointer;
+}
+.collapse{
+    border-top: 2px brown;
+}

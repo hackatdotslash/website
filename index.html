@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+   <link href="jquery.classycountdown.css" rel="stylesheet" type="text/css">
+  <link href="style2.css" rel="stylesheet" type="text/css" media="all" /> 
   <link href="https://fonts.googleapis.com/css?family=Ubuntu|Lato|Quicksand|Pacifico|Work Sans|Abel|Berkshire Swash" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -75,6 +77,76 @@
 
       </div>
     </div>
+  </section>
+  <section id="fifth">
+    <div class="container-fluid timer">
+     <div id="countdown9" class="ClassyCountdownDemo"></div>    
+    </div>
+
+
+    <script src="jquery-timer/jquery.min.js"></script>
+     <script src="jquery-timer/jquery.knob.js"></script>
+     <script src="jquery-timer/jquery.throttle.js"></script>
+     <script src="jquery-timer/jquery.classycountdown.js"></script>
+    <script>
+       var currentDate = new Date().getTime()/1000;     
+        var futureDate  = new Date("April 17, 2018 10:00:00").getTime()/1000;
+
+       $(document).ready(function() {
+      $('#countdown9').ClassyCountdown({
+         
+
+        end: futureDate,
+        now: currentDate,
+        labels: true,
+        style: {
+          element: "",
+          textResponsive: .5,
+          days: {
+            gauge: {
+              thickness: .10,
+              bgColor: "rgba(0,0,0,0)",
+              fgColor: "#000000",
+              lineCap: 'round'
+            },
+            textCSS: 'font-weight:300; color:#2f3238;'
+          },
+          hours: {
+             gauge: {
+               thickness: .10,
+               bgColor: "rgba(0,0,0,0)",
+               fgColor: "#000000",
+               lineCap: 'round'
+             },
+             textCSS: ' font-weight:300; color:#2f3238;'
+           },
+        minutes: {
+          gauge: {
+            thickness: .10,
+            bgColor: "rgba(0,0,0,0)",
+            fgColor: "#000000",
+            lineCap: 'round'
+          },
+          textCSS: ' font-weight:300; color:#2f3238;'
+        },
+        seconds: {
+          gauge: {
+            thickness: .10,
+            bgColor: "rgba(0,0,0,0)",
+            fgColor: "#000000",
+            lineCap: 'round'
+          },
+          textCSS: ' font-weight:300; color:#2f3238;'
+        }
+
+      },
+      onEndCallback: function() {
+        console.log("Time out!");
+      }
+    });
+  });
+</script>  
+  	
   </section>
   <section id="second">
     <div class="container-fluid">

@@ -11,16 +11,16 @@
 .ClassyCountdown-wrapper > div {
     display: inline-block;
     position: relative;
-    width: 23%;
+    width: 18%;
     margin: 0 1%;
     height: inherit !important;
 }
 .ClassyCountdown-wrapper .ClassyCountdown-value {
     width: 100%;
-    line-height: 1em;
+    line-height: 0.5em;
     position: absolute;
     top: 50%;
     text-align: center;
-    left: 0;
+    left: 0px;
     display: block;
 }

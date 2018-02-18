@@ -72,14 +72,15 @@ p.copy_rights a:hover{
 }
 .ClassyCountdown-value{
 	font-size:45px;
+	color:#a8c0ff;
 	font-family: 'Montserrat', sans-serif;
 }
 .ClassyCountdown-value span{
 	font-family: 'Open Sans', sans-serif !important;
 }
 .ClassyCountdown-wrapper canvas {
-    width: 220px;
-    height: 220px;
+    width: 160px;
+    height: 160px;
 }
 /*-- responsive media queries --*/
 

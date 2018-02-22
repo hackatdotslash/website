@@ -8,6 +8,9 @@
     background: transparent;
     border-bottom: none;
 }
+/*.scrolled .navbar-collapse ul li{
+    background:#79cbca;
+}*/
 
 #first{
     min-height: 110vh; 
@@ -16,7 +19,23 @@
     background: linear-gradient(to bottom,#a8c0ff, #3f2b96),url('images/') no-repeat center ; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
+.box{
+    padding: 5px;
+    height: 100px;
+    border:2px solid #a8c0ff;
+    font-family: 'Abel';
+    color:whitesmoke;
+    background-color: #a8c0ff;
+    margin-bottom: 10px;
+}
+.box1{
+    height: 100px;
+    padding: 5px;
+    border:2px solid #a8c0ff;
+    border-top:0px;
+    background-color: whitesmoke;
 
+}
 
 .jumbotron h1{
     font-size: 10em;;
@@ -39,7 +58,7 @@
 
 
 .scrolled {
-    background: black;
+    background: #8f94fb;
     opacity: 0.8;
     color:whitesmoke;
 }
@@ -66,6 +85,14 @@
 }
 #third{
     height: 100vh;
+}
+#third h2{
+    margin: 0px;
+}
+
+#third h1{
+    font-family: 'Abel';
+    color:#3f2b96;
 }
 .faqs{
     cursor: pointer;
@@ -112,6 +139,11 @@ margin-top: 5%;
 margin-bottom: 5%;
 }
 
+.seventh{
+  height:auto;
+
+
+}
 
 @media all and (max-width:768px){
     #second h3{
@@ -138,8 +170,8 @@ display: initial;
 
 .card{
   width:300px;
-  height: 300px; 
-  padding: 20px 50px;
+  height: 350px; 
+  padding: 20px 56px;
   margin: 40px;
   border:1px solid grey;
   -webkit-box-shadow: 4px 9px 20px 2px rgba(176,169,176,0.98);
@@ -155,7 +187,7 @@ display: initial;
   box-shadow: 2px 4px 10px 1px rgba(176,169,176,0.78);
 
 }
-.card:hover .above_card{
+/*.card:hover .above_card{
     opacity: 1;
     display: inherit;
 }
@@ -165,18 +197,19 @@ display: initial;
 }
 .card:hover .content{
     display: none;
-}
+}*/
 .card img{
-    background-position: right center;
+    background-position: center;
 }
 .card h2{
     /*text-transform: uppercase;*/
     font-family: 'Quicksand';
+    font-size: 25px;
     /*font-weight: bold;*/
     color:grey;
 }
-.above_card{
-  transition:all .8s ease-in-out;
+/*.above_card{
+  transition:all 1s ease-in-out;
   opacity: 0;
   display: none;
   position: relative;
@@ -184,17 +217,19 @@ display: initial;
   left: 80px;
   -webkit-transform: translate(-40%,-200%);
   -moz-transform: translate(-40%, -200%);
-}
+}*/
 .content{
-    padding: 10px;
     text-transform: uppercase;
     text-align: center;
-    font-size: 20px;
     font-family: 'Abel';
 }
-@media only screen and (max-width:1000px){
+
+@media only screen and (max-width:768px){
+    .scrolled .navbar-collapse ul li{
+    background:#79cbca;
+    }
     .card{
-        margin-left:100px;
+        margin-left:10px;
     }
 }
 .button_front{
@@ -203,7 +238,7 @@ display: initial;
   width:100px;
   text-align: center;
   font-size:20px;
-  border:3px solid #8f94fb;
+  border:3px solid #FFA500;
   border-radius:0px;
   /*font-weight: bold;*/
   font-family:'Abel';

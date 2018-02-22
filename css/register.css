@@ -1,11 +1,11 @@
 .register{
     box-sizing: border-box !important;
     transition: 0.5s;
-    margin: 5px;    
+    margin: 5px;
     line-height: 1.5;
     width: 100%;
 
-    border: 0.5px solid grey;
+    border:0.5px solid #cec5c5f2;
 
 }
 .register:focus{
@@ -23,7 +23,7 @@
     padding: 5px 20px;
 }
 .register-field-label{
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     /*text-align: center;*/
     margin-top: 5px;
 }
@@ -46,6 +46,7 @@
 .register-header{
     text-align: center;
     font-size: x-large;
+    margin-top: 60px;
 
 }
 .error-text{
@@ -57,10 +58,12 @@
 .container-width{
   background-image: linear-gradient(-90deg, #185a9d, #43cea2);
   color:#185a9d;
+  font-family: 'Exo 2', sans-serif;
+
 
 }
 .col-md-8{
-    background-color:white; 
+    background-color:white;
 }
 .col-md-12{
     padding-bottom: 5px;
@@ -68,4 +71,44 @@
 .members{
     margin-top: 5px;
     margin-bottom: 25px;
+}
+
+
+.navbar button{
+    margin: 10px;
+    border-radius: 0px;
+    height: 40px;
+    background: transparent;
+}
+.navbar{
+    background: #b6fbff;
+    border-bottom: none;
+    padding-bottom: 6px;
+}
+/*.scrolled .navbar-collapse ul li{
+    background:#79cbca;
+}*/
+
+
+#first{
+    min-height: 110vh;
+    background: #00bf8f;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #a8c0ff, #3f2b96),url('images/') no-repeat center;  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom,#a8c0ff, #3f2b96),url('images/') no-repeat center ; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.scrolled {
+    background: #8f94fb;
+    opacity: 0.8;
+    color:whitesmoke;
+}
+.scrolled button{
+    color: whitesmoke;
+}
+
+
+@media all and (max-width:768px) {
+    ul li:hover {
+        background: rgba(221, 220, 220, 0.404)
+    }
 }

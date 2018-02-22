@@ -94,13 +94,52 @@ if (!empty($_POST["register-user"])) {
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- font-->
+    <link href="https://fonts.googleapis.com/css?family=Exo+2" rel="stylesheet">
     <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous"> -->
     <link href="css/register.css" rel="stylesheet">
 </head>
 <body>
 
+ <section id="first">
+      <nav class="navbar navbar-default navbar-fixed-top">
+          <div class="container-fluid">
+          <div class="row">
+          <div class="col-md-12">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">
+                    <img alt="Brand" src="images/v3.1.png" class="img-responsive" style="height:50px;width:100px">
+                  </a>
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+
+              <ul class="nav navbar-nav navbar-right text-center">
+                <li><button role="button" href="#" class=" button_front btn-active">AboutUs</button></li>
+                <li><button role="button" href="#" class=" button_front btn-active">FAQ</button></li>
+                <li><button role="button" href="#" class=" button_front btn-active">Prizes</button></li>
+                <li><button role="button" href="#" class=" button_front btn-active">Option 4</button></li>
+                <li><button role="button" href="#" class=" button_front btn-active">Option 5</button></li>
+                <li><button role="button" href="#" class=" button_front btn-active">Option 6</button></li>
+              </ul>
+            </div>
+            </div>
+            </div>
+          </div>
+        </nav>
+
+
 <div class="container-width">
-    
+
     <div class="row">
         <div class="col-md-2"></div>
         <div class="col-md-8 card">
@@ -109,7 +148,7 @@ if (!empty($_POST["register-user"])) {
                     <h1 class="col-md-12">REGISTRATION FORM</h1>
             </div>
             <div class="error-text"><?php if(isset($error_message)) echo $error_message; ?></div>
-            
+
             <!-- form-->
             <form name="frmRegistration" class="row" action="" method="POST">
                 <div class="row">

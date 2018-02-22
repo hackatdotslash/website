@@ -105,7 +105,7 @@ p.copy_rights a:hover{
 }
 @media (max-width: 1080px){
 	.content {
-		padding: 71px 0;
+		padding: 26px 0;
 	}
 	.content h1 {
 		font-size: 36px;
@@ -122,6 +122,9 @@ p.copy_rights a:hover{
 	}	
 	body {
 		min-height: 667px;
+	}
+	.card{
+		height: 400px;
 	}
 }
 @media (max-width: 1024px){
@@ -186,7 +189,7 @@ p.copy_rights a:hover{
 		min-height: 930px;
 	}
 	.content {
-		padding: 134px 0;
+		padding: 24px 0;
 	}
 	.main {
 		margin: 100px auto 94px;

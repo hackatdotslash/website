@@ -139,6 +139,11 @@ margin-top: 5%;
 margin-bottom: 5%;
 }
 
+.seventh{
+  height:auto;
+
+
+}
 
 @media all and (max-width:768px){
     #second h3{

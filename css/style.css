@@ -20,21 +20,28 @@
 }
 
 .box{
-    padding: 5px;
+    padding: 20px;
     height: 100px;
     border:2px solid #a8c0ff;
     font-family: 'Abel';
     color:whitesmoke;
     background-color: #a8c0ff;
     margin-bottom: 10px;
+    font-size:2em;
+    word-wrap: break-word;
 }
 .box1{
-    height: 100px;
+    height: 100%;
     padding: 5px;
     border:2px solid #a8c0ff;
     border-top:0px;
     background-color: whitesmoke;
-
+}
+.wrapper{
+    display: flex;
+}
+.wrapper a{
+    flex: 1;
 }
 
 .jumbotron h1{
@@ -169,16 +176,16 @@ display: initial;
 }
 
 .card{
-  width:300px;
-  height: 350px; 
+    text-align: center;
   padding: 20px 56px;
   margin: 40px;
   border:1px solid grey;
   -webkit-box-shadow: 4px 9px 20px 2px rgba(176,169,176,0.98);
   -moz-box-shadow: 4px 9px 20px 2px rgba(176,169,176,0.98);
   box-shadow: 4px 9px 20px 2px grey/*rgba(176,169,176,0.98)*/;
-  float: left;
   overflow: hidden;
+  transition: all 0.4s ease;
+  width: 100%;
 }
 .card:hover {
    border:2px solid #8f94fb;
@@ -205,24 +212,19 @@ display: initial;
     /*text-transform: uppercase;*/
     font-family: 'Quicksand';
     font-size: 25px;
-    /*font-weight: bold;*/
+    font-weight: bold;
     color:grey;
 }
-/*.above_card{
-  transition:all 1s ease-in-out;
-  opacity: 0;
-  display: none;
-  position: relative;
-  top: 280px;
-  left: 80px;
-  -webkit-transform: translate(-40%,-200%);
-  -moz-transform: translate(-40%, -200%);
-}*/
+
+
 .content{
     text-transform: uppercase;
     text-align: center;
     font-family: 'Abel';
+    letter-spacing: 1px;
+    font-weight: bolder;
 }
+
 
 @media only screen and (max-width:768px){
     .scrolled .navbar-collapse ul li{
@@ -230,6 +232,36 @@ display: initial;
     }
     .card{
         margin-left:10px;
+    }
+    .box{
+        padding: 20px;
+        height: 200px;
+        border:2px solid #a8c0ff;
+        font-family: 'Abel';
+        color:whitesmoke;
+        background-color: #a8c0ff;
+        margin-bottom: 10px;
+        font-size:2em;
+        word-wrap: break-word;
+    }
+}
+@media only screen and (max-width:992px){
+    .scrolled .navbar-collapse ul li{
+    background:#79cbca;
+    }
+    .card{
+        margin-left:10px;
+    }
+    .box{
+        padding: 20px;
+        height: 150px;
+        border:2px solid #a8c0ff;
+        font-family: 'Abel';
+        color:whitesmoke;
+        background-color: #a8c0ff;
+        margin-bottom: 10px;
+        font-size:2em;
+        word-wrap: break-word;
     }
 }
 .button_front{
@@ -243,7 +275,7 @@ display: initial;
   /*font-weight: bold;*/
   font-family:'Abel';
   color: black;
-  transition:ease-in-out 0.8s;
+  transition:ease-in-out 0.4s;
   cursor: pointer;
   overflow: hidden;
   box-sizing: border-box;

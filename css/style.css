@@ -5,7 +5,7 @@
     background: transparent;
 }
 .navbar{
-    background: #000000;
+    background: transparent;
     border-bottom: none;
 }
 
@@ -203,11 +203,11 @@ display: initial;
   width:100px;
   text-align: center;
   font-size:20px;
-  border:3px solid #ffffff;
+  border:3px solid #8f94fb;
   border-radius:0px;
   /*font-weight: bold;*/
   font-family:'Abel';
-  color: white;
+  color: black;
   transition:ease-in-out 0.8s;
   cursor: pointer;
   overflow: hidden;

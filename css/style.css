@@ -7,16 +7,18 @@
 .navbar{
     background: transparent;
     border-bottom: none;
+    padding-bottom: 8px;
 }
 /*.scrolled .navbar-collapse ul li{
     background:#79cbca;
 }*/
 
 #first{
-    min-height: 110vh; 
+    min-height: 110vh;
     background: #00bf8f;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to bottom, #a8c0ff, #3f2b96),url('images/') no-repeat center;  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to bottom,#a8c0ff, #3f2b96),url('images/') no-repeat center ; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to bottom,#83a4d4, #b6fbff),url('images/') no-repeat center ; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
 
 .box{
@@ -36,6 +38,7 @@
     border:2px solid #a8c0ff;
     border-top:0px;
     background-color: whitesmoke;
+    font-family: 'Exo 2', sans-serif;
 }
 .wrapper{
     display: flex;
@@ -50,23 +53,26 @@
     font-family: 'Anton', sans-serif;
 }
 .jumbotron h3{
-    font-size: 2em;
-    color: white;
-    font-family: 'Kavivanar', cursive;
+    font-size: 3em;
+    color: #0d2c5a;
+font-family: 'Exo 2', sans-serif;
 }
 .jumbotron{
-    padding-top: 200px;
+    padding-top: 160px;
     background: transparent;
 }
 .jumbotron .col-xs-10{
-    color: white;
-    font-family: 'Kavivanar', cursive;
+    color: #0d2c5a;
+font-family: 'Exo 2', sans-serif;
 }
 
 
 .scrolled {
+  background:#18063c;
+  /*
     background: #8f94fb;
     opacity: 0.8;
+    */
     color:whitesmoke;
 }
 .scrolled button{
@@ -116,10 +122,11 @@
     padding-left: 10vw;
 }
 .item{
-    margin-top:1%; 
+    margin-top:1%;
 }
 .item1{
     margin-top: -16%;
+
 }
 
 /*.wrapper{
@@ -145,7 +152,11 @@ left:34vw;
 margin-top: 5%;
 margin-bottom: 5%;
 }
+#sixth{
 
+font-family: 'Exo 2', sans-serif;
+color: #0d2c5a;
+}
 .seventh{
   height:auto;
 
@@ -270,7 +281,7 @@ display: initial;
   width:100px;
   text-align: center;
   font-size:20px;
-  border:3px solid #FFA500;
+  border:1.5px solid #FFA500;
   border-radius:0px;
   /*font-weight: bold;*/
   font-family:'Abel';
@@ -308,7 +319,7 @@ color: wheat;
 text-shadow: black 0 0 1px;
 }
 .col{
-    
+
     min-height: 30vh;
 }
 .col i{

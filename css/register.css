@@ -1,0 +1,58 @@
+.register{
+    box-sizing: border-box !important;
+    border: 2px solid #ccc;
+    border-radius: 0 !important;
+    transition: 0.5s;
+    margin: 5px;
+    line-height: 1.5;
+    width: 100%;
+}
+.register:focus{
+    border: 2px solid #0c264f;
+}
+.register_button{
+    background-color: #ffffff;
+    color: black;
+    border: 2px solid #0c264f;
+    padding: 5px 20px;
+}
+.register_button:hover{
+    background-color: #0c264f;
+    color: white;
+    padding: 5px 20px;
+}
+.register-field-label{
+    font-size: 1.3rem;
+    /*text-align: center;*/
+    margin-top: 5px;
+}
+
+.register-radio-button{
+    line-height: 3.0;
+    padding-left: 49px;
+}
+
+.register-button-container{
+    text-align: center;
+    padding-top: 20px;
+}
+
+.register-box{
+    padding-left:10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 15px;
+    box-sizing: border-box !important;
+    border: 3px solid #0c264f;
+    border-radius: 0 !important;
+}
+.register-header{
+    text-align: center;
+    font-size: x-large;
+}
+.error-text{
+    text-align: left;
+    font-size: small;
+    color: #e21111;
+    height: 20px;
+}

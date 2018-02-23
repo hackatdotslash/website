@@ -198,7 +198,7 @@ p.copy_rights a:hover{
 }
 @media (max-width: 736px){
 	.content {
-		padding: 76px 0;
+		padding: 26px 0;
 	}
 	.subscribe {
 		margin-top: 5em;
@@ -209,7 +209,7 @@ p.copy_rights a:hover{
 }
 @media (max-width: 667px){
 	.content {
-		padding: 52px 0;
+		padding: 22px 0;
 	}
 	.main {
 		margin: 52px auto 94px;
@@ -294,7 +294,7 @@ p.copy_rights a:hover{
 	}
 	/*-- agileits --*/
 	.content {
-		padding: 95px 0;
+		padding: 25px 0;
 	}
 	.main {
 		margin: 80px auto 74px;
@@ -318,7 +318,7 @@ p.copy_rights a:hover{
 		width: 65%;
 	}
 	.content {
-		padding: 61px 0;
+		padding: 21px 0;
 	}
 	body {
 		min-height: 605px;

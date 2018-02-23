@@ -159,8 +159,9 @@ color: #0d2c5a;
 }
 .seventh{
   height:auto;
-
-
+}
+iframe{
+    width:100%;
 }
 
 @media all and (max-width:768px){

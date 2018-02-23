@@ -1,3 +1,7 @@
+body {
+    position: relative;
+  }
+
 .navbar button{
     margin: 10px;
     border-radius: 0px;
@@ -8,16 +12,27 @@
     background: transparent;
     border-bottom: none;
     padding-bottom: 8px;
+    max-height: 60px;
 }
+
 /*.scrolled .navbar-collapse ul li{
     background:#79cbca;
 }*/
 
 #first{
     min-height: 110vh;
-    background: #00bf8f;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to bottom, #a8c0ff, #3f2b96),url('images/') no-repeat center;  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to bottom,#83a4d4, #b6fbff),url('images/') no-repeat center ; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: rgb(2,17,29); /* Old browsers */
+    background: -moz-linear-gradient(left, rgba(2,17,29,1) 0%, rgba(3,123,181,1) 50%, rgba(2,17,29,1) 100%); /* FF3.6-15 */
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(2,17,29,1)), color-stop(50%,rgba(3,123,181,1)), color-stop(100%,rgba(2,17,29,1))); /* Chrome4-9,Safari4-5 */
+    background: -webkit-linear-gradient(left, rgba(2,17,29,1) 0%,rgba(3,123,181,1) 50%,rgba(2,17,29,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: -o-linear-gradient(left, rgba(2,17,29,1) 0%,rgba(3,123,181,1) 50%,rgba(2,17,29,1) 100%); /* Opera 11.10-11.50 */
+    background: -ms-linear-gradient(left, rgba(2,17,29,1) 0%,rgba(3,123,181,1) 50%,rgba(2,17,29,1) 100%); /* IE10 preview */
+    background: linear-gradient(to right, rgba(2,17,29,1) 0%,rgba(3,123,181,1) 50%,rgba(2,17,29,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#02111d', endColorstr='#02111d',GradientType=1 ); /* IE6-9 */
+
+
+    
+
 
 }
 
@@ -27,7 +42,7 @@
     border:2px solid #a8c0ff;
     font-family: 'Abel';
     color:whitesmoke;
-    background-color: #a8c0ff;
+    background-color: #1a90ff;
     margin-bottom: 10px;
     font-size:2em;
     word-wrap: break-word;
@@ -62,10 +77,28 @@ font-family: 'Exo 2', sans-serif;
     background: transparent;
 }
 .jumbotron .col-xs-10{
-    color: #0d2c5a;
+    font-size: 3em;     
 font-family: 'Exo 2', sans-serif;
 }
+.img_box{
+    box-shadow: 0 -100px 1000px rgb(3, 243, 3);
+}
+#hack_text{
+    letter-spacing: 1px;
+    font-size: 2em;
+    margin-top:-80px;
+}
+.fa-google{
+    font-size: 4em;
+    text-decoration: none;
+    text-align: center;
+}
+.fa-google:hover{
+    text-decoration: none;
+    color: #1A90FF;
+    
 
+}
 
 .scrolled {
   background:#18063c;
@@ -123,6 +156,8 @@ font-family: 'Exo 2', sans-serif;
 }
 .item{
     margin-top:1%;
+    color:white;
+    text-shadow: 0 0 10px black;
 }
 .item1{
     margin-top: -16%;
@@ -178,9 +213,33 @@ iframe{
 .learn_more{
    display: none;
 }
-ul li:hover{
+ul li{
     background: rgba(221, 220, 220, 0.404)
 }
+ul li:hover{
+    background: rgba(221, 220, 220, 0.712)
+}
+#hack_text{
+    letter-spacing: 1px;
+    font-size: 1.8em;
+    margin-top:10px;
+}
+.jumbotron .col-xs-10{
+    font-size: 1em;     
+font-family: 'Exo 2', sans-serif;
+}
+.fa-google{
+    font-size: 1em;
+    text-decoration: none;
+    text-align: center;
+}
+}
+#footer a{
+    color: wheat;
+    text-shadow: 0 0 5px black;
+}
+#footer a:hover{
+    color:#037BB4;
 }
 
 body{
@@ -256,14 +315,14 @@ display: initial;
         font-size:2em;
         word-wrap: break-word;
     }
+    .card_row{
+        margin-left: 0;
+        margin-right: 0;
+    }
 }
 @media only screen and (max-width:992px){
-    .scrolled .navbar-collapse ul li{
-    background:#79cbca;
-    }
-    .card{
-        margin-left:10px;
-    }
+   
+    
     .box{
         padding: 20px;
         height: 150px;
@@ -275,7 +334,36 @@ display: initial;
         font-size:2em;
         word-wrap: break-word;
     }
+    
 }
+@media only screen and (max-width:400px){
+    .scrolled .navbar-collapse ul li{
+    background:#79cbca;
+    }
+   
+    .box{
+        padding: 10px;
+        height: 200px;
+        border:2px solid #a8c0ff;
+        font-family: 'Abel';
+        color:whitesmoke;
+        background-color: #a8c0ff;
+        margin-bottom: 10px;
+        font-size:1.5em;
+        word-wrap: break-word;
+    }
+    .card_row{
+        margin-left: 0;
+        margin-right: 0;
+    }
+    ul li{
+        background: rgba(221, 220, 220, 0.404)
+    }
+    ul li:hover{
+        background: rgba(221, 220, 220, 0.712)
+    }
+}
+
 .button_front{
   margin-top:5%;
   padding: 2px;
@@ -286,7 +374,9 @@ display: initial;
   border-radius:0px;
   /*font-weight: bold;*/
   font-family:'Abel';
-  color: black;
+  color: wheat;
+  font-weight: bolder;
+  letter-spacing: 1px;
   transition:ease-in-out 0.4s;
   cursor: pointer;
   overflow: hidden;

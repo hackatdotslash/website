@@ -5,14 +5,14 @@ body {
 .navbar button{
     margin: 10px;
     border-radius: 0px;
-    height: 40px;
+    height: 50px;
     background: transparent;
 }
 .navbar{
     background: transparent;
     border-bottom: none;
-    padding-bottom: 8px;
-    max-height: 60px;
+    /*padding-bottom: 8px;*/
+    /*max-height: 80px;*/
 }
 
 /*.scrolled .navbar-collapse ul li{
@@ -137,7 +137,14 @@ font-family: 'Exo 2', sans-serif;
 .jumbotron h5{
     font-size: 1.5em;
 }
-.jumbotron button{
+.jumbotron button {
+    font-size: 0.5em;
+    background-color: rgba(2,17,29,1);
+    border:1.5px solid #FFA500;
+   /* padding-left: 10vw;
+    padding-left: 10vw;*/
+}
+li button {
     font-size: 0.5em;
     background-color: rgba(2,17,29,1);
     border:1.5px solid #FFA500;
@@ -296,11 +303,12 @@ display: initial;
     }
     .card{
         margin-left:0px;
-        height:400px;
+        /*height:400px;*/
     }
     .box{
         padding: 20px;
-        height: 200px;
+        height: 100px;
+        width:250px;
         border:2px solid #a8c0ff;
         font-family: 'Abel';
         color:whitesmoke;
@@ -313,13 +321,21 @@ display: initial;
         margin-left: 0;
         margin-right: 0;
     }
+    #third .col-xs-6{
+        float:none;
+    }
+    .box1{
+        width:250px;
+    }
+
 }
 @media only screen and (max-width:992px){
 
 
     .box{
         padding: 20px;
-        height: 150px;
+        height: 120px;
+        width:280px;
         border:2px solid #a8c0ff;
         font-family: 'Abel';
         color:whitesmoke;
@@ -328,7 +344,6 @@ display: initial;
         font-size:2em;
         word-wrap: break-word;
     }
-
 }
 @media only screen and (max-width:400px){
     .scrolled .navbar-collapse ul li{
@@ -337,7 +352,8 @@ display: initial;
 
     .box{
         padding: 10px;
-        height: 200px;
+        height: 80px;
+        width:250px;
         border:2px solid #a8c0ff;
         font-family: 'Abel';
         color:whitesmoke;
@@ -345,6 +361,9 @@ display: initial;
         margin-bottom: 10px;
         font-size:1.5em;
         word-wrap: break-word;
+    }
+    .box1{
+        width:250px;
     }
     .card_row{
         margin-left: 0;
@@ -385,8 +404,8 @@ display: initial;
   border:2px solid #cfd9df;
   color:whitesmoke;
   background-position: right center;
-  -webkit-box-shadow: inset 5.5em 0 0 0 navy;
-          box-shadow: inset 5.5em 0 0 0 navy;
+  -webkit-box-shadow: inset 5.5em 0 0 0 #FFA500;
+          box-shadow: inset 5.5em 0 0 0 #FFA500;
 }
 .wrapper{
     display: flex;
@@ -420,4 +439,19 @@ text-shadow: black 0 0 1px;
 }
 footer .form-group button{
     margin-top: 5px;
+}
+a:link {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+a:active {
+    text-decoration: none;
 }

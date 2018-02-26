@@ -126,9 +126,9 @@ body {
     font-family: 'Kavivanar', cursive;
 }
 
-#third {
+/*#third {
     height: 100vh;
-}
+}*/
 
 #third h2 {
     margin: 0px;
@@ -386,8 +386,8 @@ a:active {
         background: #79cbca;
     }
     .card {
-        margin-left: 0px;
-        height:350px;
+        margin-left: 10px;
+        height:380px;
     }
     .box {
         padding: 20px;

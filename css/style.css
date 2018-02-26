@@ -43,6 +43,7 @@ body {
     border-top: 0px;
     background-color: whitesmoke;
     font-family: 'Exo 2', sans-serif;
+    width: 100%;
 }
 
 .wrapper {
@@ -454,7 +455,7 @@ a:active {
         word-wrap: break-word;
     }
     .box1 {
-        width: 250px;
+        min-width: 800px;
     }
     .card_row {
         margin-left: 0;

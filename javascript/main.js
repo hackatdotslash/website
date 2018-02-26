@@ -14,7 +14,7 @@ var parallaxInstance1 = new Parallax(scene1,{
 var rotateTween= new TimelineMax({repeat:-1}).to(".circle",3,{rotation:360});
 var hack = new CircleType(document.getElementById('hack_text')).dir(-1).radius(450);
 var currentDate = new Date().getTime() / 1000;
-        var futureDate = new Date("April 17, 2018 10:00:00").getTime() / 1000;
+        var futureDate = new Date("April 7, 2018 08:00:00").getTime() / 1000;
 
         $(document).ready(function () {
             $('nav a').click(function(){

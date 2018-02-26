@@ -67,7 +67,7 @@ if (!empty($_POST["register-user"])) {
             $error_message = "";
             $success_message = "You have registered successfully!";
             unset($_POST);
-            header("location: index.php");
+            header("location: index.html");
         } else {
             $error_message = "Problem in registration. Try Again!";
         }

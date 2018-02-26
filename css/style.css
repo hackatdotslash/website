@@ -455,7 +455,7 @@ a:active {
         word-wrap: break-word;
     }
     .box1 {
-        min-width: 800px;
+        width: 250px;
     }
     .card_row {
         margin-left: 0;

@@ -67,7 +67,7 @@ if (!empty($_POST["register-user"])) {
             $error_message = "";
             $success_message = "You have registered successfully!";
             unset($_POST);
-            header("location: index.php");
+            header("location: index.html");
         } else {
             $error_message = "Problem in registration. Try Again!";
         }
@@ -91,46 +91,61 @@ if (!empty($_POST["register-user"])) {
 
     <!--    Register Files-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <link href="css/registerr.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.9/validator.min.js"></script>
     <!-- font-->
     <link href="https://fonts.googleapis.com/css?family=Exo+2" rel="stylesheet">
     <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous"> -->
-    <link href="css/register.css" rel="stylesheet">
 </head>
 <body>
-<nav class="navbar navbar-default navbar-fixed-top">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-12">
-                <!-- Brand and toggle get grouped for better mobile display -->
-                <div class="navbar-header">
-                    <a class="navbar-brand" href="#"><img alt="Brand" src="images/v3.1.png" class="img-responsive" style="height:50px;width:100px"></a>
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
-                        aria-expanded="false">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                </div>
-                <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <ul class="nav navbar-nav navbar-right text-center">
-                        <li><button role="button" href="#" class=" button_front btn-active">AboutUs</button></li>
-                        <li><button role="button" href="#" class=" button_front btn-active">FAQ</button></li>
-                        <li><button role="button" href="#" class=" button_front btn-active">Prizes</button></li>
-                        <li><button role="button" href="#" class=" button_front btn-active">Option 4</button></li>
-                        <li><button role="button" href="#" class=" button_front btn-active">Option 5</button></li>
-                        <li><button role="button" href="#" class=" button_front btn-active">Option 6</button></li>
-                    </ul>
-                </div>
-            </div>
+    <nav class="navbar navbar-default navbar-fixed-top" id="navbar">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">
+            <!-- <img alt="Brand" src="images/v3.1.png" class="img-responsive" style="height:50px;width:90px">-->
+          </a>
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+            aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
         </div>
-    </div>
-</nav>
 
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+
+          <ul class="nav navbar-nav navbar-right text-center v">
+              <li>
+                  <button role="button"  class="button_front btn-active"><a class="button_front" href="#first">Home</a></button>
+                </li>
+            <li>
+              <button role="button" class="button_front btn-active"><a class="button_front" href="#sixth">About Us</a></button>
+            </li>
+            <li>
+              <button role="button"  class=" button_front btn-active"><a class="button_front" href="#seventh">Timeline</a></button>
+            </li>
+            <li>
+              <button role="button"  class=" button_front btn-active"><a class="button_front" href="#third">faqs</a></button>
+            </li>
+            <li>
+              <button role="button" class=" button_front btn-active"><a class="button_front" href="#fourth">prizes</a></button>
+            </li>
+            <li>
+              <button role="button"  class=" button_front btn-active"><a class="button_front" href="#footer">contact us</a></button>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+    </nav>
+</section>
 <div class="container-width">
     <div class="row">
         <div class="col-md-2"></div>

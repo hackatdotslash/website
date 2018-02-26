@@ -31,7 +31,7 @@ body {
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#02111d', endColorstr='#02111d',GradientType=1 ); /* IE6-9 */
 
 
-    
+
 
 
 }
@@ -77,7 +77,7 @@ font-family: 'Exo 2', sans-serif;
     background: transparent;
 }
 .jumbotron .col-xs-10{
-    font-size: 3em;     
+    font-size: 3em;
 font-family: 'Exo 2', sans-serif;
 }
 .img_box{
@@ -96,7 +96,7 @@ font-family: 'Exo 2', sans-serif;
 .fa-google:hover{
     text-decoration: none;
     color: #1A90FF;
-    
+
 
 }
 
@@ -113,7 +113,7 @@ font-family: 'Exo 2', sans-serif;
 }
 
 
-#second {
+#second
     height: 100vh;
     background: url("images/Gujarat-stub.png") no-repeat right ;
 }
@@ -229,7 +229,7 @@ ul li:hover{
     margin-top:10px;
 }
 .jumbotron .col-xs-10{
-    font-size: 1em;     
+    font-size: 1em;
 font-family: 'Exo 2', sans-serif;
 }
 .fa-google{
@@ -329,8 +329,8 @@ display: initial;
     }
 }
 @media only screen and (max-width:992px){
-   
-    
+
+
     .box{
         padding: 20px;
         height: 150px;
@@ -342,13 +342,13 @@ display: initial;
         font-size:2em;
         word-wrap: break-word;
     }
-    
+
 }
 @media only screen and (max-width:400px){
     .scrolled .navbar-collapse ul li{
     background:#79cbca;
     }
-   
+
     .box{
         padding: 10px;
         height: 200px;

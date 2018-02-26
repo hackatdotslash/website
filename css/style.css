@@ -21,20 +21,11 @@ body {
 
 #first{
     min-height: 110vh;
-    background: rgb(2,17,29); /* Old browsers */
-    background: -moz-linear-gradient(left, rgba(2,17,29,1) 0%, rgba(3,123,181,1) 50%, rgba(2,17,29,1) 100%); /* FF3.6-15 */
-    background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(2,17,29,1)), color-stop(50%,rgba(3,123,181,1)), color-stop(100%,rgba(2,17,29,1))); /* Chrome4-9,Safari4-5 */
-    background: -webkit-linear-gradient(left, rgba(2,17,29,1) 0%,rgba(3,123,181,1) 50%,rgba(2,17,29,1) 100%); /* Chrome10-25,Safari5.1-6 */
-    background: -o-linear-gradient(left, rgba(2,17,29,1) 0%,rgba(3,123,181,1) 50%,rgba(2,17,29,1) 100%); /* Opera 11.10-11.50 */
-    background: -ms-linear-gradient(left, rgba(2,17,29,1) 0%,rgba(3,123,181,1) 50%,rgba(2,17,29,1) 100%); /* IE10 preview */
-    background: linear-gradient(to right, rgba(2,17,29,1) 0%,rgba(3,123,181,1) 50%,rgba(2,17,29,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#02111d', endColorstr='#02111d',GradientType=1 ); /* IE6-9 */
-
-
-
-
-
-}
+    background: #e78001;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #f83600, #e78001);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #f83600, #e78001); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+    }
 
 .box{
     padding: 20px;
@@ -112,11 +103,6 @@ font-family: 'Exo 2', sans-serif;
     color: whitesmoke;
 }
 
-
-#second
-    height: 100vh;
-    background: url("images/Gujarat-stub.png") no-repeat right ;
-}
 #second h1{
     font-size: 5em;
     color:  #00bf8f;
@@ -383,6 +369,7 @@ display: initial;
   /*font-weight: bold;*/
   font-family:'Abel';
   color: wheat;
+  text-shadow: 0 0 5px black;
   font-weight: bolder;
   letter-spacing: 1px;
   transition:ease-in-out 0.4s;

@@ -214,8 +214,8 @@ body {
 
 .card {
     text-align: center;
-    padding: 20px 56px;
-    margin-bottom: 40px;
+    margin: 40px;
+    width: 300px;
     border: 1px solid grey;
     -webkit-box-shadow: 4px 9px 20px 2px rgba(176, 169, 176, 0.98);
     box-shadow: 4px 9px 20px 2px grey/*rgba(176,169,176,0.98)*/
@@ -223,7 +223,6 @@ body {
     overflow: hidden;
     -webkit-transition: all 0.4s ease;
     transition: all 0.4s ease;
-    width: 100%;
 }
 
 .card:hover {
@@ -388,7 +387,7 @@ a:active {
     }
     .card {
         margin-left: 0px;
-        /*height:400px;*/
+        height:350px;
     }
     .box {
         padding: 20px;
@@ -457,8 +456,20 @@ a:active {
         font-size: 1.5em;
         word-wrap: break-word;
     }
+    #third .container{
+        padding-left: 2px;
+    }
+    #third .col-xs-6{
+        padding-left: 8px;
+    }
+    #third .row{
+        margin-left: 0;
+    }
     .box1 {
         width: 250px;
+    }
+    #fourth .content h2{
+        margin-top: 10px;
     }
     .card_row {
         margin-left: 0;

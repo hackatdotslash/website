@@ -436,6 +436,9 @@ a:active {
         text-align: justify;
         line-height: 1.2em;
     }
+    .box1{
+        width:280px;
+    }
 }
 
 @media only screen and (max-width:400px) {

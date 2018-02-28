@@ -19,8 +19,8 @@ body {
     background: #e78001;
     /* fallback for old browsers */
     /* Chrome 10-25, Safari 5.1-6 */
-    background: -webkit-gradient(linear, right top, left top, from(#f83600), to(#e78001));
-    background: linear-gradient(to left, #f83600, #e78001);
+    background: -webkit-gradient(linear, right top, left top, from(#ec8302), to(#e78001));
+    background: linear-gradient(to left, #ec8302, #e78001);
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
@@ -104,12 +104,16 @@ body {
 }
 
 .scrolled {
-    background: #18063c;
-    color: whitesmoke;
+    background:whitesmoke;
+    color: orange;
 }
 
 .scrolled button {
-    color: whitesmoke;
+    color: orange;
+}
+.scrolled a{
+    color:black;
+    text-shadow: none;
 }
 
 
@@ -358,8 +362,7 @@ a:active {
     }
     .learn_more {
         display: none;
-    }
-    
+  }
     #hack_text {
         letter-spacing: 1px;
         font-size: 1.8em;
@@ -377,9 +380,6 @@ a:active {
     #third h1 {
         font-size: 30px;
     }
-    /*.scrolled .navbar-collapse ul li {
-        background: #23020b;
-    }*/
     .card {
         margin-left: 100px;
         
@@ -489,15 +489,11 @@ a:active {
         margin-left: 0;
         margin-right: 0;
     }
+
     .card{
         margin-left: 0px;
     }
-    ul li {
-        background: rgba(8, 23, 18, 0.92);
-    }
-    ul li:hover {
-        background: rgba(21, 37, 34, 0.712);
-    }
+   
     #sixth p {
         text-align: justify;
         line-height: 1.2em;

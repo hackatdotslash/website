@@ -58,6 +58,18 @@ body {
     flex: 1;
 }
 
+.logo {
+    height: 250%;
+    width: 150%;
+    align-content: top;
+}
+
+.logo1 {
+    margin: auto;
+    height: 10%;
+    width: 20%;
+}
+
 .jumbotron h1 {
     font-size: 10em;
     ;

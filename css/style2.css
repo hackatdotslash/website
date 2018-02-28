@@ -226,7 +226,7 @@ p.copy_rights a:hover {
 
 @media (max-width: 736px) {
 	.content {
-		padding: 26px 0;
+		padding: 16px 0;
 	}
 	.subscribe {
 		margin-top: 5em;
@@ -395,7 +395,7 @@ p.copy_rights a:hover {
 		margin-top: 2.5em;
 	}
 	.content {
-		padding: 76px 0;
+		padding: 10px 0;
 	}
 	body {
 		min-height: 484px;

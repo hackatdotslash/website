@@ -112,6 +112,7 @@ body {
     color: whitesmoke;
 }
 
+
 #second h1 {
     font-size: 5em;
     color: #00bf8f;
@@ -352,19 +353,13 @@ a:active {
     }
     .jumbotron h1 {
         font-size: 6em;
-        ;
         color: rgb(255, 255, 255);
         font-family: 'Anton', sans-serif;
     }
     .learn_more {
         display: none;
     }
-    ul li {
-        background: rgba(221, 220, 220, 0.404)
-    }
-    ul li:hover {
-        background: rgba(221, 220, 220, 0.712)
-    }
+    
     #hack_text {
         letter-spacing: 1px;
         font-size: 1.8em;
@@ -382,12 +377,12 @@ a:active {
     #third h1 {
         font-size: 30px;
     }
-    .scrolled .navbar-collapse ul li {
-        background: #79cbca;
-    }
+    /*.scrolled .navbar-collapse ul li {
+        background: #23020b;
+    }*/
     .card {
-        margin-left: 10px;
-        height:380px;
+        margin-left: 100px;
+        
     }
     .box {
         padding: 20px;
@@ -416,13 +411,22 @@ a:active {
         line-height: 1.2em;
         margin: 0;
     }
+    .scrolled{
+        background: transparent;
+    }
+    ul li {
+        background: rgba(8, 23, 18, 0.92);
+    }
+    ul li:hover {
+        background: rgba(21, 37, 34, 0.712);
+    }
 }
 
 @media only screen and (max-width:992px) {
     .box {
         padding: 20px;
         height: 120px;
-        width: 280px;
+        width: 480px;
         border: 2px solid #a8c0ff;
         font-family: 'Abel';
         color: whitesmoke;
@@ -436,13 +440,23 @@ a:active {
         line-height: 1.2em;
     }
     .box1{
-        width:280px;
+        width:480px;
     }
+    #third .col-xs-6 {
+        float: none;
+    }
+    .card{
+        margin-left: 20%;
+    }
+    .row{
+        margin-left: 0px;
+    }
+
 }
 
-@media only screen and (max-width:400px) {
-    .scrolled .navbar-collapse ul li {
-        background: #79cbca;
+@media only screen and (max-width:420px) {
+     .scrolled .navbar-collapse ul li {
+        background: #23020b;
     }
     .box {
         padding: 10px;
@@ -475,14 +489,20 @@ a:active {
         margin-left: 0;
         margin-right: 0;
     }
+    .card{
+        margin-left: 0px;
+    }
     ul li {
-        background: rgba(221, 220, 220, 0.404)
+        background: rgba(8, 23, 18, 0.92);
     }
     ul li:hover {
-        background: rgba(221, 220, 220, 0.712)
+        background: rgba(21, 37, 34, 0.712);
     }
     #sixth p {
         text-align: justify;
         line-height: 1.2em;
+    }
+    .scrolled{
+        background: #18063c;
     }
 }

@@ -19,8 +19,8 @@ body {
     background: #e78001;
     /* fallback for old browsers */
     /* Chrome 10-25, Safari 5.1-6 */
-    background: -webkit-gradient(linear, right top, left top, from(#f83600), to(#e78001));
-    background: linear-gradient(to left, #f83600, #e78001);
+    background: -webkit-gradient(linear, right top, left top, from(#ec8302), to(#e78001));
+    background: linear-gradient(to left, #ec8302, #e78001);
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
@@ -104,12 +104,16 @@ body {
 }
 
 .scrolled {
-    background: #18063c;
-    color: whitesmoke;
+    background:whitesmoke;
+    color: orange;
 }
 
 .scrolled button {
-    color: whitesmoke;
+    color: orange;
+}
+.scrolled a{
+    color:black;
+    text-shadow: none;
 }
 
 #second h1 {
@@ -360,10 +364,10 @@ a:active {
         display: none;
     }
     ul li {
-        background: rgba(221, 220, 220, 0.404)
+        background: rgba(228, 91, 13, 0.486);
     }
     ul li:hover {
-        background: rgba(221, 220, 220, 0.712)
+        background: rgba(228, 92, 13, 0.644);
     }
     #hack_text {
         letter-spacing: 1px;
@@ -381,9 +385,6 @@ a:active {
     }
     #third h1 {
         font-size: 30px;
-    }
-    .scrolled .navbar-collapse ul li {
-        background: #79cbca;
     }
     .card {
         margin-left: 10px;
@@ -474,12 +475,6 @@ a:active {
     .card_row {
         margin-left: 0;
         margin-right: 0;
-    }
-    ul li {
-        background: rgba(221, 220, 220, 0.404)
-    }
-    ul li:hover {
-        background: rgba(221, 220, 220, 0.712)
     }
     #sixth p {
         text-align: justify;

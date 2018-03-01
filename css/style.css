@@ -59,15 +59,9 @@ body {
 }
 
 .logo {
-    height: 250%;
-    width: 150%;
+    width: 100px;
+    height: 100px;
     align-content: top;
-}
-
-.logo1 {
-    margin: auto;
-    height: 10%;
-    width: 20%;
 }
 
 .jumbotron h1 {
@@ -116,18 +110,18 @@ body {
 }
 
 .scrolled {
-    background:whitesmoke;
+    background: whitesmoke;
     color: orange;
 }
 
 .scrolled button {
     color: orange;
 }
-.scrolled a{
-    color:black;
+
+.scrolled a {
+    color: black;
     text-shadow: none;
 }
-
 
 #second h1 {
     font-size: 5em;
@@ -374,7 +368,7 @@ a:active {
     }
     .learn_more {
         display: none;
-  }
+    }
     #hack_text {
         letter-spacing: 1px;
         font-size: 1.8em;
@@ -394,7 +388,6 @@ a:active {
     }
     .card {
         margin-left: 100px;
-        
     }
     .box {
         padding: 20px;
@@ -423,11 +416,11 @@ a:active {
         line-height: 1.2em;
         margin: 0;
     }
-    .scrolled{
+    .scrolled {
         background: transparent;
     }
     ul li {
-        background: rgba(8, 23, 18, 0.92);
+        background: rgba(241, 158, 34, 0.479);
     }
     ul li:hover {
         background: rgba(21, 37, 34, 0.712);
@@ -451,24 +444,26 @@ a:active {
         text-align: justify;
         line-height: 1.2em;
     }
-    .box1{
-        width:480px;
+    .box1 {
+        width: 480px;
     }
     #third .col-xs-6 {
         float: none;
     }
-    .card{
+    .card {
         margin-left: 20%;
     }
-    .row{
+    .row {
         margin-left: 0px;
     }
-
+    .scrolled .navbar-collapse ul li {
+        background: rgba(241, 158, 34, 0.466);
+    }
 }
 
 @media only screen and (max-width:420px) {
-     .scrolled .navbar-collapse ul li {
-        background: #23020b;
+    .scrolled .navbar-collapse ul li {
+        background: rgba(241, 158, 34, 0.466);
     }
     .box {
         padding: 10px;
@@ -482,35 +477,37 @@ a:active {
         font-size: 1.5em;
         word-wrap: break-word;
     }
-    #third .container{
+    #third .container {
         padding-left: 2px;
     }
-    #third .col-xs-6{
+    #third .col-xs-6 {
         padding-left: 8px;
     }
-    #third .row{
+    #third .row {
         margin-left: 0;
     }
     .box1 {
         width: 250px;
     }
-    #fourth .content h2{
+    #fourth .content h2 {
         margin-top: 10px;
     }
     .card_row {
         margin-left: 0;
         margin-right: 0;
     }
-
-    .card{
+    .card {
         margin-left: 0px;
     }
-   
     #sixth p {
         text-align: justify;
         line-height: 1.2em;
     }
-    .scrolled{
-        background: #18063c;
+    .scrolled button {
+        background: whitesmoke;
+        color: orange;
+    }
+    .scrolled button {
+        color: orange;
     }
 }

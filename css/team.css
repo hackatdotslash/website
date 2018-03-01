@@ -8,12 +8,22 @@
     bottom: 0;
     left: 0;
 }
+.topClear{
+    margin-top:10vh;
+}
 
 .pos {
     background-color: rgba(0, 128, 128, 0.534);
     z-index: 999;
     position: relative;
-    margin-bottom: 20vh;
+    margin-top: 20vh;
+}
+.logo1{
+    position: fixed;
+    top:5%;
+    right: 5%;
+    width:100px;
+    height: 100px
 }
 
 .jumbotron,
@@ -110,15 +120,20 @@
 }
 
 .above_card {
-    -webkit-transition: all .1s ease-in-out;
-    transition: all .1s ease-in-out;
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
     opacity: 0;
     display: none;
     position: relative;
-    bottom: 36%;
-    font-size: 3em;
+    bottom:20%;
+    font-size: 1.5em;
+    color:white;
 }
+.pic{
+    max-height:80%;
+    width: 100%;
 
+}
 a {
     text-decoration: none;
 }
@@ -132,18 +147,27 @@ a {
 }
 
 #firstrow {
-    background: rgb(9, 153, 236);
-    height: 100vh;
+    background: rgb(248, 249, 250);
+    min-height: 100vh;
 }
-
+#first{
+    min-height:100vh;
+}
 .secondrow {
     background: #FC6C7C;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 .thirdrow {
     background: #FEC401;
-    height: 100vh;
+    min-height: 100vh;
+}
+.title {
+    font-size: 8em;
+    letter-spacing: 4px;
+    font-weight: bolder;
+    color: white;
+    text-shadow: 0 0 10px black;
 }
 
 @media only screen and (max-width:992px) {
@@ -152,13 +176,77 @@ a {
         margin-bottom: 15px;
         height: 200px;
     }
+    .banner {
+        font-size: 4em;
+        border: outset red;
+        height: 20vh;
+        background: rgba(255, 250, 250, 0.61);
+        letter-spacing: 4px;
+        font-weight: bolder;
+        color: whitesmoke;
+        text-shadow: 0 0 10px black;
+    }
+    .subtitle {
+        font-size: 3em;
+        letter-spacing: 4px;
+        font-weight: bolder;
+        color: white;
+        text-transform: lowercase;
+        text-shadow: 0 0 10px black;
+    }
+    .title {
+        font-size: 4.6em;
+        letter-spacing: 4px;
+        font-weight: bolder;
+        color: white;
+        text-shadow: 0 0 10px black;
+    }
 }
 
-@media only screen and (max-width:540px) {
+@media only screen and (max-width:768px) {
     .card {
         margin-top: 15px;
         margin-bottom: 15px;
     }
+    .card {
+        width: 100%;
+        height: 500px;
+        padding: 15px;
+        border: 1px solid grey;
+        -webkit-box-shadow: 4px 9px 20px 2px rgba(0, 0, 0, 0.568);
+        box-shadow: 4px 9px 20px 2px rgba(0, 0, 0, 0.568);
+        background: seashell;
+        -webkit-transition: all 0.4s ease;
+        transition: all 0.4s ease;
+        text-align: center;
+    }
+    .banner {
+        font-size: 3.5em;
+        border: outset red;
+        height: 20vh;
+        background: rgba(255, 250, 250, 0.61);
+        letter-spacing: 4px;
+        font-weight: bolder;
+        color: whitesmoke;
+        text-shadow: 0 0 10px black;
+    }
+    .subtitle {
+        font-size: 2em;
+        letter-spacing: 4px;
+        font-weight: bolder;
+        color: white;
+        text-transform: lowercase;
+        text-shadow: 0 0 10px black;
+    }
+    .title {
+        font-size: 2.3em;
+        letter-spacing: 4px;
+        font-weight: bolder;
+        color: white;
+        text-shadow: 0 0 10px black;
+    }
+    
+
 }
 
 @media only screen and (max-width:420px) {

@@ -123,10 +123,10 @@
 
 .navbar {
     margin-top: 1.5px;
-    background: white;
+    background: none;
     border-bottom: none;
     padding-bottom: 6px;
-    outline: 2px solid #c982d2;
+    /*outline: 2px solid #c982d2;*/
 }
 
 */

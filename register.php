@@ -12,12 +12,24 @@ if (!empty($_POST["register-user"])) {
     //     $error_message = "Passwords should be same";
     // }
 
-    // /* Email Validation */
-    // if (!isset($error_message)) {
-    //     if (!filter_var($_POST["userEmail"], FILTER_VALIDATE_EMAIL)) {
-    //         $error_message = "Invalid Email Address";
-    //     }
-    // }
+    /* Email Validation */
+    if (!isset($error_message)) {
+        if (!filter_var($_POST["p1Email"], FILTER_VALIDATE_EMAIL)) {
+            $error_message = "Invalid Email Address";
+        }
+    }
+
+    if (!isset($error_message)) {
+        if (!filter_var($_POST["p2Email"], FILTER_VALIDATE_EMAIL)) {
+            $error_message = "Invalid Email Address";
+        }
+    }
+
+    if (!isset($error_message)) {
+        if (!filter_var($_POST["p3Email"], FILTER_VALIDATE_EMAIL)) {
+            $error_message = "Invalid Email Address";
+        }
+    }
 
     // /* Validation to check if gender is selected */
     // if (!isset($error_message)) {
@@ -45,17 +57,16 @@ if (!empty($_POST["register-user"])) {
     //     }
     // }
 
-    // /* Validation to check if email taken */
-    // if (!isset($error_message)) {
-    //     $email = $_POST["userEmail"];
-    //     require_once("config.php");
-    //     $db_handle = new DBController();
-    //     $query = "SELECT user_name FROM users WHERE email = '".$email."'";
-    //     $ifEmailTaken = $db_handle->numRows($query);
-    //     if ($ifEmailTaken>0) {
-    //         $error_message = " Email is already taken!!!";
-    //     }
-    // }
+    /* Validation to check if email taken */
+    if (!isset($error_message)) {
+        require_once("include/config.php");
+        $db_handle = new DBController();
+        $query = "SELECT teamName FROM registration WHERE p1Email = '".$_POST["p1Email"]."' OR p2Email = '".$_POST["p2Email"]."' OR p3Email = '".$_POST["p3Email"]."'";
+        $ifEmailTaken = $db_handle->numRows($query);
+        if ($ifEmailTaken>0) {
+            $error_message = "The Email is already used!!!";
+        }
+    }
 
     if (!isset($error_message)) {
         require_once("include/config.php");
@@ -79,17 +90,6 @@ if (!empty($_POST["register-user"])) {
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Registration Form</title>
-    <!--    Navbar include files-->
-    <!-- <link href="style/bootstrap.min.css" rel="stylesheet"> -->
-    <!-- <link href="style/navbar.css" rel="stylesheet"> -->
-
-    <!-- <script src="scripts/jquery/jquery.min.js"></script> -->
-    <!-- <script src="scripts/popper/popper.min.js"></script> -->
-    <!-- <script src="scripts/bootstrap/js/bootstrap.min.js"></script> -->
-    <!-- <script src="scripts/jquery-easing/jquery.easing.min.js"></script> -->
-    <!-- <script src="scripts/navbar.js"></script> -->
-
-    <!--    Register Files-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
     <link href="css/registerr.css" rel="stylesheet">
@@ -98,15 +98,12 @@ if (!empty($_POST["register-user"])) {
     <script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.9/validator.min.js"></script>
     <!-- font-->
     <link href="https://fonts.googleapis.com/css?family=Exo+2" rel="stylesheet">
-    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous"> -->
 </head>
 <body>
     <nav class="navbar navbar-default navbar-fixed-top" id="navbar">
       <div class="container-fluid">
-        <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
           <a class="navbar-brand" href="#">
-            <!-- <img alt="Brand" src="images/v3.1.png" class="img-responsive" style="height:50px;width:90px">-->
           </a>
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
             aria-expanded="false">
@@ -121,11 +118,11 @@ if (!empty($_POST["register-user"])) {
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
 
-          <ul class="nav navbar-nav navbar-right text-center v">
+          <ul class="nav navbar-nav navbar-left text-center v">
               <li>
-                  <button role="button"  class="button_front btn-active"><a class="button_front" href="#first">Home</a></button>
+                  <button onclick="window.open('./index.html','_self')" role="button"  class="register_button">Home</button>
                 </li>
-            <li>
+            <!-- <li>
               <button role="button" class="button_front btn-active"><a class="button_front" href="#sixth">About Us</a></button>
             </li>
             <li>
@@ -139,13 +136,12 @@ if (!empty($_POST["register-user"])) {
             </li>
             <li>
               <button role="button"  class=" button_front btn-active"><a class="button_front" href="#footer">contact us</a></button>
-            </li>
+            </li> -->
 
           </ul>
         </div>
       </div>
     </nav>
-</section>
 <div class="container-width">
     <div class="row">
         <div class="col-md-2"></div>
@@ -325,7 +321,7 @@ if (!empty($_POST["register-user"])) {
                     </div>
                     <div class="col-md-8">
                         <div class="form-group">
-                            <input type="text" class="register" id="p2Email" name="p2Email" value="<?php if (isset($_POST['p2Email'])) echo $_POST['p2Email']; ?>"
+                            <input type="email" class="register" id="p2Email" name="p2Email" value="<?php if (isset($_POST['p2Email'])) echo $_POST['p2Email']; ?>"
                                 required>
                             <div class="help-block with-errors"></div>
                         </div>
@@ -440,7 +436,7 @@ if (!empty($_POST["register-user"])) {
                     </div>
                     <div class="col-md-8">
                         <div class="form-group">
-                            <input type="text" class="register" id="p3Email" name="p3Email" value="<?php if (isset($_POST['p3Email'])) echo $_POST['p3Email']; ?>"
+                            <input type="email" class="register" id="p3Email" name="p3Email" value="<?php if (isset($_POST['p3Email'])) echo $_POST['p3Email']; ?>"
                                 required>
                             <div class="help-block with-errors"></div>
                         </div>

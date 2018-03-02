@@ -62,7 +62,8 @@ body {
 .logo {
     width: 100px;
     height: 100px;
-    align-content: top;
+    -ms-flex-line-pack: top;
+        align-content: top;
 }
 
 .jumbotron h1 {

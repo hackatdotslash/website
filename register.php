@@ -78,7 +78,7 @@ if (!empty($_POST["register-user"])) {
             $error_message = "";
             $success_message = "You have registered successfully!";
             unset($_POST);
-            header("location: index.html");
+            header("location: register.html");
         } else {
             $error_message = "Problem in registration. Try Again!";
         }
@@ -120,23 +120,9 @@ if (!empty($_POST["register-user"])) {
 
           <ul class="nav navbar-nav navbar-left text-center v">
               <li>
-                  <button onclick="window.open('./index.html','_self')" role="button"  class="register_button">Home</button>
-                </li>
-            <!-- <li>
-              <button role="button" class="button_front btn-active"><a class="button_front" href="#sixth">About Us</a></button>
-            </li>
-            <li>
-              <button role="button"  class=" button_front btn-active"><a class="button_front" href="#seventh">Timeline</a></button>
-            </li>
-            <li>
-              <button role="button"  class=" button_front btn-active"><a class="button_front" href="#third">faqs</a></button>
-            </li>
-            <li>
-              <button role="button" class=" button_front btn-active"><a class="button_front" href="#fourth">prizes</a></button>
-            </li>
-            <li>
-              <button role="button"  class=" button_front btn-active"><a class="button_front" href="#footer">contact us</a></button>
-            </li> -->
+              <button onclick="window.open('./index.html','_self')" class="btn btn-warning btn-active btn-lg">
+                            <a href="./index.html">HOME</a>
+                        </button>            </li>
 
           </ul>
         </div>

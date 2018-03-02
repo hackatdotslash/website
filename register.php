@@ -120,9 +120,8 @@ if (!empty($_POST["register-user"])) {
 
           <ul class="nav navbar-nav navbar-left text-center v">
               <li>
-              <button onclick="window.open('./index.html','_self')" class="btn btn-warning btn-active btn-lg">
-                            <a href="./index.html">HOME</a>
-                        </button>            </li>
+                <a href="./index.html" class="home-link"><button onclick="window.open('./index.html','_self')" class="register_button">HOME</button></a>
+            </li>
 
           </ul>
         </div>

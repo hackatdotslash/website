@@ -9,6 +9,7 @@
     border: 0.5px solid #cec5c5f2;
 }
 
+
 .register:focus {
     border: 0.5px solid #59b9ff;
 }
@@ -137,5 +138,10 @@
 @media all and (max-width:768px) {
     ul li:hover {
         background: rgba(221, 220, 220, 0.404)
+    }
+    .register-radio-button {
+        line-height: 3.0;
+        padding-left: 50%;
+        text-align: center;
     }
 }

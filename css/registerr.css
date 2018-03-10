@@ -141,6 +141,23 @@
     /*outline: 2px solid #c982d2;*/
 }
 
+.reg-but {
+    background-color: transparent;
+    border: 2px solid #FFF;
+    margin: 10px;
+    width: 100%;
+}
+
+.abc {
+    margin-top: 30px;
+}
+
+.reg-but:hover,
+.reg-but:focus {
+    border: 2px solid #cfd9df;
+    background-color: transparent;
+}
+
 */
 /*.scrolled .navbar-collapse ul li{
     background:#79cbca;

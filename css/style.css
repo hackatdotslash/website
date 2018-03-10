@@ -38,7 +38,7 @@ body {
     border: 2px solid #a8c0ff;
     font-family: 'Abel';
     color: whitesmoke;
-    background-color: rgb(241, 159, 34);
+    background-color:#749fcc;
     margin-bottom: 10px;
     font-size: 2em;
     word-wrap: break-word;
@@ -156,7 +156,7 @@ body {
 
 #third h1 {
     font-family: 'Abel';
-    color: #3f2b96;
+    color: #185ba0;
     font-size: 60px;
     font-weight: 600;
 }
@@ -281,7 +281,7 @@ body {
     color: whitesmoke;
     background-position: right center;
     -webkit-box-shadow: inset 5.5em 0 0 0 #FFA500;
-    box-shadow: inset 5.5em 0 0 0 #FFA500;
+    box-shadow: inset 5.5em 0 0 0 #749fcc;
 }
 
 .wrapper {

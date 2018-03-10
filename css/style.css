@@ -20,8 +20,15 @@ body {
     background: #e78001;
     /* fallback for old browsers */
     /* Chrome 10-25, Safari 5.1-6 */
-    background: -webkit-gradient(linear, right top, left top, from(#ec8302), to(#e78001));
+
+
+/*    background: -webkit-gradient(linear, right top, left top, from(#ec8302),to(#e78001));
     background: linear-gradient(to left, #ec8302, #e78001);
+*/
+ background-image: -webkit-gradient(linear, right top, left top, from(#185a9d), to(#43cea2));
+ background-image:linear-gradient(-90deg, #2b71bb, #4fe8b8);
+
+
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 

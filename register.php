@@ -1,62 +1,28 @@
 <?php
 if (!empty($_POST["register-user"])) {
     /* Form Required Field Validation */
-    foreach ($_POST as $key => $value) {
-        if (empty($_POST[$key])) {
-            $error_message = "All Fields are required";
-            break;
-        }
-    }
-    // /* Password Matching Validation */
-    // if ($_POST['password'] != $_POST['confirm_password']) {
-    //     $error_message = "Passwords should be same";
+    // foreach ($_POST as $key => $value) {
+    //     if (empty($_POST[$key])) {
+    //         $error_message = "All Fields are required";
+    //         break;
+    //     }
     // }
-
     /* Email Validation */
     if (!isset($error_message)) {
         if (!filter_var($_POST["p1Email"], FILTER_VALIDATE_EMAIL)) {
             $error_message = "Invalid Email Address";
         }
     }
-
     if (!isset($error_message)) {
         if (!filter_var($_POST["p2Email"], FILTER_VALIDATE_EMAIL)) {
             $error_message = "Invalid Email Address";
         }
     }
-
     if (!isset($error_message)) {
         if (!filter_var($_POST["p3Email"], FILTER_VALIDATE_EMAIL)) {
             $error_message = "Invalid Email Address";
         }
     }
-
-    // /* Validation to check if gender is selected */
-    // if (!isset($error_message)) {
-    //     if (!isset($_POST["gender"])) {
-    //         $error_message = " All Fields are required";
-    //     }
-    // }
-
-    // /* Validation to check if Mob No is 10 digits long */
-    // if (!isset($error_message)) {
-    //     if (strlen($_POST["contact"]) < 10) {
-    //         $error_message = " Invalid Mobile No.";
-    //     }
-    // }
-
-    // /* Validation to check if username taken */
-    // if (!isset($error_message)) {
-    //     $userName = $_POST["userName"];
-    //     require_once("config.php");
-    //     $db_handle = new DBController();
-    //     $query = "SELECT user_name FROM users WHERE user_name = '".$userName."'";
-    //     $ifUserNameTaken = $db_handle->numRows($query);
-    //     if ($ifUserNameTaken>0) {
-    //         $error_message = " Username is already taken!!!";
-    //     }
-    // }
-
     /* Validation to check if email taken */
     if (!isset($error_message)) {
         require_once("include/config.php");
@@ -67,12 +33,11 @@ if (!empty($_POST["register-user"])) {
             $error_message = "The Email is already used!!!";
         }
     }
-
     if (!isset($error_message)) {
         require_once("include/config.php");
         $db_handle = new DBController();
-        $query = "INSERT INTO registration (teamName, collegeName, p1Name, p1Email, p1Gender, p1Dob, p1Contact, p1Github, p1Linkedin, p1Twitter, p1Facebook, p2Name, p2Email, p2Gender, p2Dob, p2Contact, p2Github, p2Linkedin, p2Twitter, p2Facebook, p3Name, p3Email, p3Gender, p3Dob, p3Contact, p3Github, p3Linkedin, p3Twitter, p3Facebook, newToHackathon, heardAboutHackathon, intrestedInWorkshop, specialNeeds) VALUES
-        ('" . $_POST["teamName"] . "', '" . $_POST["collegeName"] . "', '" . $_POST["p1Name"] . "', '" . $_POST["p1Email"] . "', '" . $_POST["p1Gender"] . "', '" . $_POST["p1Dob"] . "', '" . $_POST["p1Contact"]. "', '" . $_POST["p1Github"]. "', '" . $_POST["p1Linkedin"]. "', '" . $_POST["p1Twitter"]. "', '" . $_POST["p1Facebook"]. "', '" . $_POST["p2Name"] . "', '" . $_POST["p2Email"] . "', '" . $_POST["p2Gender"] . "', '" . $_POST["p2Dob"] . "', '" . $_POST["p2Contact"]. "', '" . $_POST["p2Github"]. "', '" . $_POST["p2Linkedin"]. "', '" . $_POST["p2Twitter"]. "', '" . $_POST["p2Facebook"]. "', '" . $_POST["p3Name"] . "', '" . $_POST["p3Email"] . "', '" . $_POST["p3Gender"] . "', '" . $_POST["p3Dob"] . "', '" . $_POST["p3Contact"]. "', '" . $_POST["p3Github"]. "', '" . $_POST["p3Linkedin"]. "', '" . $_POST["p3Twitter"]. "', '" . $_POST["p3Facebook"]. "', '" . $_POST["newToHackathon"]. "', '" . $_POST["heardAboutHackathon"]. "', '" . $_POST["intrestedInWorkshop"] . "', '" . $_POST["specialNeeds"] ."')";
+        $query = "INSERT INTO registration (teamName, p1Name, p1Email, p1College, p1Gender, p1Dob, p1Contact, p1Github, p1Linkedin, p1Twitter, p1Facebook, p2Name, p2Email, p2College, p2Gender, p2Dob, p2Contact, p2Github, p2Linkedin, p2Twitter, p2Facebook, p3Name, p3Email, p3College, p3Gender, p3Dob, p3Contact, p3Github, p3Linkedin, p3Twitter, p3Facebook, newToHackathon, heardAboutHackathon, intrestedInWorkshop, specialNeeds) VALUES
+        ('" . $_POST["teamName"] . "', '" . $_POST["p1Name"] . "', '" . $_POST["p1Email"] . "', '" . $_POST["p1College"] . "', '" . $_POST["p1Gender"] . "', '" . $_POST["p1Dob"] . "', '" . $_POST["p1Contact"]. "', '" . $_POST["p1Github"]. "', '" . $_POST["p1Linkedin"]. "', '" . $_POST["p1Twitter"]. "', '" . $_POST["p1Facebook"]. "', '" . $_POST["p2Name"] . "', '" . $_POST["p2Email"] . "', '" . $_POST["p2College"] . "', '" . $_POST["p2Gender"] . "', '" . $_POST["p2Dob"] . "', '" . $_POST["p2Contact"]. "', '" . $_POST["p2Github"]. "', '" . $_POST["p2Linkedin"]. "', '" . $_POST["p2Twitter"]. "', '" . $_POST["p2Facebook"]. "', '" . $_POST["p3Name"] . "', '" . $_POST["p3Email"] . "', '" . $_POST["p1College"] . "', '" . $_POST["p3Gender"] . "', '" . $_POST["p3Dob"] . "', '" . $_POST["p3Contact"]. "', '" . $_POST["p3Github"]. "', '" . $_POST["p3Linkedin"]. "', '" . $_POST["p3Twitter"]. "', '" . $_POST["p3Facebook"]. "', '" . $_POST["newToHackathon"]. "', '" . $_POST["heardAboutHackathon"]. "', '" . $_POST["intrestedInWorkshop"] . "', '" . $_POST["specialNeeds"] ."')";
         $result = $db_handle->insertQuery($query);
         if (!empty($result)) {
             $error_message = "";
@@ -91,7 +56,6 @@ if (!empty($_POST["register-user"])) {
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Registration Form</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-
     <link href="css/registerr.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -113,16 +77,12 @@ if (!empty($_POST["register-user"])) {
             <span class="icon-bar"></span>
           </button>
         </div>
-
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-
-
           <ul class="nav navbar-nav navbar-left text-center v">
               <li>
                 <a href="./index.html" class="home-link"><button onclick="window.open('./index.html','_self')" class="register_button">HOME</button></a>
             </li>
-
           </ul>
         </div>
       </div>
@@ -133,6 +93,7 @@ if (!empty($_POST["register-user"])) {
         <div class="col-md-8 card">
             <div class="row register-header">
                 <h1 class="col-md-12">REGISTRATION FORM</h1>
+                <p class="col-md-12" style="text-align: left; font-size: 15px;"><span style="color: red">*</span> Mendatory Fields</p>
             </div>
             <div class="error-text">
                 <?php if(isset($error_message)) echo $error_message; ?>
@@ -142,23 +103,11 @@ if (!empty($_POST["register-user"])) {
             <form name="frmRegistration" class="row" action="" method="POST" data-toggle="validator">
                 <div class="row">
                     <div class="col-md-3 register-field-label">
-                        Team Name
+                        Team Name<span style="color: red">*</span>
                     </div>
                     <div class="col-md-8">
                         <div class="form-group">
                             <input type="text" class="register" id="teamName" name="teamName" value="<?php if (isset($_POST['teamName'])) echo $_POST['teamName']; ?>"
-                                required>
-                            <div class="help-block with-errors"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-3 register-field-label">
-                        College Name
-                    </div>
-                    <div class="col-md-8">
-                        <div class="form-group">
-                            <input type="text" class="register" id="collegeName" name="collegeName" value="<?php if (isset($_POST['collegeName'])) echo $_POST['collegeName']; ?>"
                                 required>
                             <div class="help-block with-errors"></div>
                         </div>
@@ -173,7 +122,7 @@ if (!empty($_POST["register-user"])) {
 
                     <div class="row">
                         <div class="col-md-3 register-field-label">
-                            Name
+                            Name<span style="color: red">*</span>
                         </div>
                         <div class="col-md-8">
                             <div class="form-group">
@@ -185,7 +134,7 @@ if (!empty($_POST["register-user"])) {
                     </div>
                     <div class="row">
                         <div class="col-md-3 register-field-label">
-                            Email
+                            Email<span style="color: red">*</span>
                         </div>
                         <div class="col-md-8">
                             <div class="form-group">
@@ -197,10 +146,22 @@ if (!empty($_POST["register-user"])) {
                     </div>
                     <div class="row">
                         <div class="col-md-3 register-field-label">
-                            Gender
+                            College Name<span style="color: red">*</span>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="form-group">
+                                <input type="text" class="register" id="p1College" name="p1College" value="<?php if (isset($_POST['p1College'])) echo $_POST['p1College']; ?>"
+                                    required>
+                                <div class="help-block with-errors"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3 register-field-label">
+                            Gender<span style="color: red">*</span>
                         </div>
                         <div class="col-md-8 text-left register-radio-button">
-                            <input type="radio" id="p1Gender" name="p1Gender" value="Male" <?php if (isset($_POST[ 'p1Gender']) && $_POST[ 'p1Gender']=="Male"
+                            <input required type="radio" id="p1Gender" name="p1Gender" value="Male" <?php if (isset($_POST[ 'p1Gender']) && $_POST[ 'p1Gender']=="Male"
                                 ) { ?>checked
                             <?php } ?>> Male
                             <input type="radio" id="p1Gender" name="p1Gender" value="Female" <?php if (isset($_POST[ 'p1Gender']) && $_POST[
@@ -210,7 +171,7 @@ if (!empty($_POST["register-user"])) {
                     </div>
                     <div class="row">
                         <div class="col-md-3 register-field-label">
-                            Date of Birth(YYYY-MM-DD)
+                            Date of Birth(YYYY-MM-DD)<span style="color: red">*</span>
                         </div>
                         <div class="col-md-8">
                             <div class="form-group">
@@ -222,7 +183,7 @@ if (!empty($_POST["register-user"])) {
                     </div>
                     <div class="row">
                         <div class="col-md-3 register-field-label">
-                            Mobile No. (+91)
+                            Mobile No. (+91)<span style="color: red">*</span>
                         </div>
                         <div class="col-md-8">
                             <div class="form-group">
@@ -234,7 +195,7 @@ if (!empty($_POST["register-user"])) {
                     </div>
                     <div class="row">
                         <div class="col-md-3 register-field-label">
-                            Github Username
+                            Github Username<span style="color: red">*</span>
                         </div>
                         <div class="col-md-8">
                             <div class="form-group">
@@ -251,7 +212,7 @@ if (!empty($_POST["register-user"])) {
                         <div class="col-md-8">
                             <div class="form-group">
                                 <input type="text" class="register" id="p1Linkedin" name="p1Linkedin" value="<?php if (isset($_POST['p1Linkedin'])) echo $_POST['p1Linkedin']; ?>"
-                                    required>
+                                    >
                                 <div class="help-block with-errors"></div>
                             </div>
                         </div>
@@ -263,7 +224,7 @@ if (!empty($_POST["register-user"])) {
                         <div class="col-md-8">
                             <div class="form-group">
                                 <input type="text" class="register" id="p1Twitter" name="p1Twitter" value="<?php if (isset($_POST['p1Twitter'])) echo $_POST['p1Twitter']; ?>"
-                                    required>
+                                    >
                                 <div class="help-block with-errors"></div>
                             </div>
                         </div>
@@ -275,7 +236,7 @@ if (!empty($_POST["register-user"])) {
                         <div class="col-md-8">
                             <div class="form-group">
                                 <input type="text" class="register" id="p1Facebook" name="p1Facebook" value="<?php if (isset($_POST['p1Facebook'])) echo $_POST['p1Facebook']; ?>"
-                                    required>
+                                    >
                                 <div class="help-block with-errors"></div>
                             </div>
                         </div>
@@ -289,7 +250,7 @@ if (!empty($_POST["register-user"])) {
 
                     <div class="row">
                         <div class="col-md-3 register-field-label">
-                            Name
+                            Name<span style="color: red">*</span>
                         </div>
                         <div class="col-md-8">
                             <div class="form-group">
@@ -302,7 +263,7 @@ if (!empty($_POST["register-user"])) {
                 </div>
                 <div class="row">
                     <div class="col-md-3 register-field-label">
-                        Email
+                        Email<span style="color: red">*</span>
                     </div>
                     <div class="col-md-8">
                         <div class="form-group">
@@ -312,12 +273,24 @@ if (!empty($_POST["register-user"])) {
                         </div>
                     </div>
                 </div>
+                    <div class="row">
+                        <div class="col-md-3 register-field-label">
+                            College Name<span style="color: red">*</span>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="form-group">
+                                <input type="text" class="register" id="p2College" name="p2College" value="<?php if (isset($_POST['p2College'])) echo $_POST['p2College']; ?>"
+                                    required>
+                                <div class="help-block with-errors"></div>
+                            </div>
+                        </div>
+                    </div>
                 <div class="row">
                     <div class="col-md-3 register-field-label">
-                        Gender
+                        Gender<span style="color: red">*</span>
                     </div>
                     <div class="col-md-8 text-left register-radio-button">
-                        <input type="radio" id="p2Gender" name="p2Gender" value="Male" <?php if (isset($_POST[ 'p2Gender']) && $_POST[ 'p2Gender']=="Male"
+                        <input required type="radio" id="p2Gender" name="p2Gender" value="Male" <?php if (isset($_POST[ 'p2Gender']) && $_POST[ 'p2Gender']=="Male"
                             ) { ?>checked
                         <?php } ?>> Male
                         <input type="radio" id="p2Gender" name="p2Gender" value="Female" <?php if (isset($_POST[ 'p2Gender']) && $_POST[
@@ -327,7 +300,7 @@ if (!empty($_POST["register-user"])) {
                 </div>
                 <div class="row">
                     <div class="col-md-3 register-field-label">
-                        Date of Birth(YYYY-MM-DD)
+                        Date of Birth(YYYY-MM-DD)<span style="color: red">*</span>
                     </div>
                     <div class="col-md-8">
                         <div class="form-group">
@@ -339,7 +312,7 @@ if (!empty($_POST["register-user"])) {
                 </div>
                 <div class="row">
                     <div class="col-md-3 register-field-label">
-                        Mobile No. (+91)
+                        Mobile No. (+91)<span style="color: red">*</span>
                     </div>
                     <div class="col-md-8">
                         <div class="form-group">
@@ -351,7 +324,7 @@ if (!empty($_POST["register-user"])) {
                 </div>
                 <div class="row">
                     <div class="col-md-3 register-field-label">
-                        Github Username
+                        Github Username<span style="color: red">*</span>
                     </div>
                     <div class="col-md-8">
                         <div class="form-group">
@@ -368,7 +341,7 @@ if (!empty($_POST["register-user"])) {
                     <div class="col-md-8">
                         <div class="form-group">
                             <input type="text" class="register" id="p2Linkedin" name="p2Linkedin" value="<?php if (isset($_POST['p2Linkedin'])) echo $_POST['p2Linkedin']; ?>"
-                                required>
+                                >
                             <div class="help-block with-errors"></div>
                         </div>
                     </div>
@@ -380,7 +353,7 @@ if (!empty($_POST["register-user"])) {
                     <div class="col-md-8">
                         <div class="form-group">
                             <input type="text" class="register" id="p2Twitter" name="p2Twitter" value="<?php if (isset($_POST['p2Twitter'])) echo $_POST['p2Twitter']; ?>"
-                                required>
+                                >
                             <div class="help-block with-errors"></div>
                         </div>
                     </div>
@@ -392,7 +365,7 @@ if (!empty($_POST["register-user"])) {
                     <div class="col-md-8">
                         <div class="form-group">
                             <input type="text" class="register" id="p2Facebook" name="p2Facebook" value="<?php if (isset($_POST['p2Facebook'])) echo $_POST['p2Facebook']; ?>"
-                                required>
+                                >
                             <div class="help-block with-errors"></div>
                         </div>
                     </div>
@@ -405,7 +378,7 @@ if (!empty($_POST["register-user"])) {
 
                 <div class="row">
                     <div class="col-md-3 register-field-label">
-                        Name
+                        Name<span style="color: red">*</span>
                     </div>
                     <div class="col-md-8">
                         <div class="form-group">
@@ -417,7 +390,7 @@ if (!empty($_POST["register-user"])) {
                 </div>
                 <div class="row">
                     <div class="col-md-3 register-field-label">
-                        Email
+                        Email<span style="color: red">*</span>
                     </div>
                     <div class="col-md-8">
                         <div class="form-group">
@@ -427,12 +400,24 @@ if (!empty($_POST["register-user"])) {
                         </div>
                     </div>
                 </div>
+                    <div class="row">
+                        <div class="col-md-3 register-field-label">
+                            College Name<span style="color: red">*</span>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="form-group">
+                                <input type="text" class="register" id="p3College" name="p3College" value="<?php if (isset($_POST['p3College'])) echo $_POST['p3College']; ?>"
+                                    required>
+                                <div class="help-block with-errors"></div>
+                            </div>
+                        </div>
+                    </div>
                 <div class="row">
                     <div class="col-md-3 register-field-label">
-                        Gender
+                        Gender<span style="color: red">*</span>
                     </div>
                     <div class="col-md-8 text-left register-radio-button">
-                        <input type="radio" id="p3Gender" name="p3Gender" value="Male" <?php if (isset($_POST[ 'p3Gender']) && $_POST[ 'p3Gender']=="Male"
+                        <input required type="radio" id="p3Gender" name="p3Gender" value="Male" <?php if (isset($_POST[ 'p3Gender']) && $_POST[ 'p3Gender']=="Male"
                             ) { ?>checked
                         <?php } ?>> Male
                         <input type="radio" id="p3Gender" name="p3Gender" value="Female" <?php if (isset($_POST[ 'p3Gender']) && $_POST[
@@ -442,7 +427,7 @@ if (!empty($_POST["register-user"])) {
                 </div>
                 <div class="row">
                     <div class="col-md-3 register-field-label">
-                        Date of Birth(YYYY-MM-DD)
+                        Date of Birth(YYYY-MM-DD)<span style="color: red">*</span>
                     </div>
                     <div class="col-md-8">
                         <div class="form-group">
@@ -454,7 +439,7 @@ if (!empty($_POST["register-user"])) {
                 </div>
                 <div class="row">
                     <div class="col-md-3 register-field-label">
-                        Mobile No. (+91)
+                        Mobile No. (+91)<span style="color: red">*</span>
                     </div>
                     <div class="col-md-8">
                         <div class="form-group">
@@ -466,7 +451,7 @@ if (!empty($_POST["register-user"])) {
                 </div>
                 <div class="row">
                     <div class="col-md-3 register-field-label">
-                        Github Username
+                        Github Username<span style="color: red">*</span>
                     </div>
                     <div class="col-md-8">
                         <div class="form-group">
@@ -483,7 +468,7 @@ if (!empty($_POST["register-user"])) {
                     <div class="col-md-8">
                         <div class="form-group">
                             <input type="text" class="register" id="p3Linkedin" name="p3Linkedin" value="<?php if (isset($_POST['p3Linkedin'])) echo $_POST['p3Linkedin']; ?>"
-                                required>
+                                >
                             <div class="help-block with-errors"></div>
                         </div>
                     </div>
@@ -495,7 +480,7 @@ if (!empty($_POST["register-user"])) {
                     <div class="col-md-8">
                         <div class="form-group">
                             <input type="text" class="register" id="p3Twitter" name="p3Twitter" value="<?php if (isset($_POST['p3Twitter'])) echo $_POST['p3Twitter']; ?>"
-                                required>
+                                >
                             <div class="help-block with-errors"></div>
                         </div>
                     </div>
@@ -507,7 +492,7 @@ if (!empty($_POST["register-user"])) {
                     <div class="col-md-8">
                         <div class="form-group">
                             <input type="text" class="register" id="p3Facebook" name="p3Facebook" value="<?php if (isset($_POST['p3Facebook'])) echo $_POST['p3Facebook']; ?>"
-                                required>
+                                >
                             <div class="help-block with-errors"></div>
                         </div>
                     </div>
@@ -527,7 +512,7 @@ if (!empty($_POST["register-user"])) {
                 </div>
                 <div class="row">
                     <div class="col-md-3 register-field-label">
-                        How did you hear about our hackathon?
+                        How did you hear about our hackathon?<span style="color: red">*</span>
                     </div>
                     <div class="col-md-8">
                         <div class="form-group">

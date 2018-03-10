@@ -175,14 +175,15 @@ body {
 
 .jumbotron button {
     font-size: 0.5em;
-    background-color: rgba(2, 17, 29, 1);
-    border: 1.5px solid #FFA500;
+    background-color: transparent;
+    border: none;
+
 }
 
 li button {
     font-size: 0.5em;
     background-color: rgba(2, 17, 29, 1);
-    border: 1.5px solid #FFA500;
+    border: none;
 }
 
 .item {
@@ -387,8 +388,8 @@ a:active {
         font-size: 1em;
         font-family: 'Exo 2', sans-serif;
     }
-    .fa-google {
-        font-size: 1em;
+    .fa-envelope {
+        font-size: 2em;
         text-decoration: none;
         text-align: center;
     }

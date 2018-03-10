@@ -31,7 +31,7 @@ if (!empty($_POST["register-user"])) {
     if (!isset($error_message)) {
         require_once("include/config.php");
         $db_handle = new DBController();
-        $query = "SELECT teamName FROM registration WHERE p1Email = '".$_POST["p1Email"]."' OR p2Email = '".$_POST["p2Email"]."' OR p3Email = '".$_POST["p3Email"]."'";
+        $query = "SELECT teamName FROM registrationNew WHERE p1Email = '".$_POST["p1Email"]."' OR p2Email = '".$_POST["p2Email"]."' OR p3Email = '".$_POST["p3Email"]."'";
         $ifEmailTaken = $db_handle->numRows($query);
         if ($ifEmailTaken>0) {
             $error_message = "The Email is already used!!!";
@@ -41,7 +41,7 @@ if (!empty($_POST["register-user"])) {
     if (!isset($error_message)) {
         require_once("include/config.php");
         $db_handle = new DBController();
-        $query = "INSERT INTO registration (teamName, p1Name, p1Email, p1College, p1Gender, p1Dob, p1Contact, p1Github, p1Linkedin, p1Twitter, p1Facebook, p2Name, p2Email, p2College, p2Gender, p2Dob, p2Contact, p2Github, p2Linkedin, p2Twitter, p2Facebook, p3Name, p3Email, p3College, p3Gender, p3Dob, p3Contact, p3Github, p3Linkedin, p3Twitter, p3Facebook, newToHackathon, heardAboutHackathon, intrestedInWorkshop, specialNeeds) VALUES
+        $query = "INSERT INTO registrationNew (teamName, p1Name, p1Email, p1College, p1Gender, p1Dob, p1Contact, p1Github, p1Linkedin, p1Twitter, p1Facebook, p2Name, p2Email, p2College, p2Gender, p2Dob, p2Contact, p2Github, p2Linkedin, p2Twitter, p2Facebook, p3Name, p3Email, p3College, p3Gender, p3Dob, p3Contact, p3Github, p3Linkedin, p3Twitter, p3Facebook, newToHackathon, heardAboutHackathon, intrestedInWorkshop, specialNeeds) VALUES
         ('" . $_POST["teamName"] . "', '" . $_POST["p1Name"] . "', '" . $_POST["p1Email"] . "', '" . $_POST["p1College"] . "', '" . $_POST["p1Gender"] . "', '" . $_POST["p1Dob"] . "', '" . $_POST["p1Contact"]. "', '" . $_POST["p1Github"]. "', '" . $_POST["p1Linkedin"]. "', '" . $_POST["p1Twitter"]. "', '" . $_POST["p1Facebook"]. "', '" . $_POST["p2Name"] . "', '" . $_POST["p2Email"] . "', '" . $_POST["p2College"] . "', '" . $_POST["p2Gender"] . "', '" . $_POST["p2Dob"] . "', '" . $_POST["p2Contact"]. "', '" . $_POST["p2Github"]. "', '" . $_POST["p2Linkedin"]. "', '" . $_POST["p2Twitter"]. "', '" . $_POST["p2Facebook"]. "', '" . $_POST["p3Name"] . "', '" . $_POST["p3Email"] . "', '" . $_POST["p1College"] . "', '" . $_POST["p3Gender"] . "', '" . $_POST["p3Dob"] . "', '" . $_POST["p3Contact"]. "', '" . $_POST["p3Github"]. "', '" . $_POST["p3Linkedin"]. "', '" . $_POST["p3Twitter"]. "', '" . $_POST["p3Facebook"]. "', '" . $_POST["newToHackathon"]. "', '" . $_POST["heardAboutHackathon"]. "', '" . $_POST["intrestedInWorkshop"] . "', '" . $_POST["specialNeeds"] ."')";
         $result = $db_handle->insertQuery($query);
         if (!empty($result)) {

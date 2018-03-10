@@ -23,10 +23,10 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `registration`
+-- Table structure for table `registrationNew`
 --
 
-CREATE TABLE `registration` (
+CREATE TABLE `registrationNew` (
   `_id` int(11) NOT NULL,
   `teamName` varchar(50) DEFAULT NULL,
   `p1Name` varchar(50) DEFAULT NULL,
@@ -70,9 +70,9 @@ CREATE TABLE `registration` (
 --
 
 --
--- Indexes for table `registration`
+-- Indexes for table `registrationNew`
 --
-ALTER TABLE `registration`
+ALTER TABLE `registrationNew`
   ADD PRIMARY KEY (`_id`);
 
 --
@@ -80,10 +80,10 @@ ALTER TABLE `registration`
 --
 
 --
--- AUTO_INCREMENT for table `registration`
+-- AUTO_INCREMENT for table `registrationNew`
 --
-ALTER TABLE `registration`
-  MODIFY `_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+ALTER TABLE `registrationNew`
+  MODIFY `_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

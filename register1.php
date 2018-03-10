@@ -19,7 +19,7 @@ if (!empty($_POST["register-user"])) {
     // if (!isset($error_message)) {
     //     require_once("include/config.php");
     //     $db_handle = new DBController();
-    //     $query = "SELECT teamName FROM registration WHERE p1Email = '".$_POST["p1Email"]."' OR p2Email = '".$_POST["p2Email"]."' OR p3Email = '".$_POST["p3Email"]."'";
+    //     $query = "SELECT teamName FROM registrationNew WHERE p1Email = '".$_POST["p1Email"]."' OR p2Email = '".$_POST["p2Email"]."' OR p3Email = '".$_POST["p3Email"]."'";
     //     $ifEmailTaken = $db_handle->numRows($query);
     //     if ($ifEmailTaken>0) {
     //         $error_message = "The Email is already used!!!";
@@ -29,7 +29,7 @@ if (!empty($_POST["register-user"])) {
     if (!isset($error_message)) {
         require_once("include/config.php");
         $db_handle = new DBController();
-        $query = "INSERT INTO registration (p1Name, p1Email, p1College, p1Gender, p1Dob, p1Contact, p1Github, p1Linkedin, p1Twitter, p1Facebook, newToHackathon, heardAboutHackathon, intrestedInWorkshop, specialNeeds) VALUES
+        $query = "INSERT INTO registrationNew (p1Name, p1Email, p1College, p1Gender, p1Dob, p1Contact, p1Github, p1Linkedin, p1Twitter, p1Facebook, newToHackathon, heardAboutHackathon, intrestedInWorkshop, specialNeeds) VALUES
         ('" . $_POST["p1Name"] . "', '" . $_POST["p1Email"] . "', '" . $_POST["p1College"] . "', '" . $_POST["p1Gender"] . "', '" . $_POST["p1Dob"] . "', '" . $_POST["p1Contact"]. "', '" . $_POST["p1Github"]. "', '" . $_POST["p1Linkedin"]. "', '" . $_POST["p1Twitter"]. "', '" . $_POST["p1Facebook"]. "', '" . $_POST["newToHackathon"]. "', '" . $_POST["heardAboutHackathon"]. "', '" . $_POST["intrestedInWorkshop"] . "', '" . $_POST["specialNeeds"] ."')";
         $result = $db_handle->insertQuery($query);
         if (!empty($result)) {

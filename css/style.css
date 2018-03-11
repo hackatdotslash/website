@@ -495,10 +495,10 @@ a:active {
         background:whitesmoke;
     }
     ul li {
-        background: rgba(241, 158, 34, 0.479);
+        background: rgba(34, 241, 231, 0.315);
     }
     ul li:hover {
-        background: rgba(21, 37, 34, 0.712);
+        background: rgba(63, 228, 198, 0.712);
     }
 }
 

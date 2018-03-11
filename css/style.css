@@ -2,6 +2,9 @@ body {
     position: relative;
     width: 100%;
 }
+:root{
+    --blue:#1d66af;
+}
 
 
 .navbar button {
@@ -39,7 +42,7 @@ body {
     border: 2px solid #a8c0ff;
     font-family: 'Abel';
     color: whitesmoke;
-    background-color: rgb(241, 159, 34);
+    background-color: #1d66af;
     margin-bottom: 10px;
     font-size: 2em;
     word-wrap: break-word;
@@ -106,7 +109,8 @@ body {
 #hack_text {
     letter-spacing: 1px;
     font-size: 2em;
-    margin-top: -80px;
+    margin-top: -150px;
+    text-shadow: 0 5px 2px black,0 5px 5px blue;
 }
 
 .fa-google {
@@ -176,10 +180,15 @@ body {
 }
 
 .jumbotron button {
-    font-size: 0.5em;
+    font-size: 2em;
     background-color: transparent;
     border: none;
-
+}
+.jumbotron button a {
+    font-size: 0.8em;
+    background-color: transparent;
+    border: 3px outset #037BB4;
+    width: 100%;
 }
 
 li button {
@@ -240,7 +249,17 @@ body {
 
 .card {
     text-align: center;
-    margin: 40px;
+    width: 300px;
+    border: 1px solid grey;
+    -webkit-box-shadow: 4px 9px 20px 2px rgba(176, 169, 176, 0.98);
+    box-shadow: 4px 9px 20px 2px grey/*rgba(176,169,176,0.98)*/
+    ;
+    overflow: hidden;
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+}
+.card2 {
+    text-align: center;
     width: 300px;
     border: 1px solid grey;
     -webkit-box-shadow: 4px 9px 20px 2px rgba(176, 169, 176, 0.98);
@@ -256,7 +275,11 @@ body {
     -webkit-box-shadow: 2px 4px 10px 1px rgba(176, 169, 176, 0.78);
     box-shadow: 2px 4px 10px 1px rgba(176, 169, 176, 0.78);
 }
-
+.card2:hover {
+    border: 2px solid #8f94fb;
+    -webkit-box-shadow: 2px 4px 10px 1px rgba(176, 169, 176, 0.78);
+    box-shadow: 2px 4px 10px 1px rgba(176, 169, 176, 0.78);
+}
 .button_front {
     margin-top: 5%;
     padding: 2px;
@@ -376,7 +399,27 @@ a:active {
     letter-spacing: 1px;
     font-weight: bolder;
 }
-
+#sixth .about{
+    background: rgba(33, 19, 235, 0.11)
+}
+.location{
+    font-family: 'Abel';
+    color: #3f2b96;
+    font-size: 60px;
+    font-weight: 600;
+}
+.prize{
+    font-family: 'Abel';
+    color: #3f2b96;
+    font-size: 60px;
+    font-weight: 600;
+}
+.organize{
+    font-family: 'Abel';
+    color: #3f2b96;
+    font-size: 60px;
+    font-weight: 600;
+}
 @media all and (max-width:768px) {
     #second h3 {
         font-size: 2.3em;
@@ -393,8 +436,12 @@ a:active {
     }
     #hack_text {
         letter-spacing: 1px;
-        font-size: 1.8em;
+        font-size: 1.5em;
         margin-top: 10px;
+        text-shadow: inherit;
+    }
+    .box1{
+        width:100%;
     }
     .jumbotron .col-xs-10 {
         font-size: 1em;
@@ -409,16 +456,21 @@ a:active {
         font-size: 30px;
     }
     .card {
-        margin-left: 100px;
+        width: 100%;
+        margin-top:30px;
+    }
+    .card2 {
+        width: 100%;
+        margin-top:30px;
     }
     .box {
         padding: 20px;
         height: 100px;
-        width: 510px;
+        width: 100%;
         border: 2px solid #a8c0ff;
         font-family: 'Abel';
         color: whitesmoke;
-        background-color: rgb(241, 159, 34);
+        background-color: var(--blue);
         margin-bottom: 10px;
         font-size: 2em;
         word-wrap: break-word;
@@ -431,7 +483,7 @@ a:active {
         float: none;
     }
     .box1 {
-        width: 250px;
+        width:100%;
     }
     #sixth p {
         text-align: justify;
@@ -439,7 +491,7 @@ a:active {
         margin: 0;
     }
     .scrolled {
-        background: transparent;
+        background:transparent;
     }
     ul li {
         background: rgba(241, 158, 34, 0.479);
@@ -449,15 +501,21 @@ a:active {
     }
 }
 
-@media only screen and (max-width:992px) and (min-width: 700px) {
+@media only screen and (max-width:992px) and (min-width: 768px) {
+    #hack_text{
+        font-size:1.5em;
+        margin-top:-100px;
+        text-shadow: 0 5px 2px black,0 5px 5px blue;
+
+    }
     #third .box {
         padding: 20px;
         height: 120px;
-        width: 680px;
+        width: 100%;
         border: 2px solid #a8c0ff;
         font-family: 'Abel';
         color: whitesmoke;
-        background-color: rgb(241, 159, 34);
+        background-color:var(--blue);
         margin-bottom: 10px;
         font-size: 2em;
         word-wrap: break-word;
@@ -467,13 +525,15 @@ a:active {
         line-height: 1.2em;
     }
     .box1 {
-        width: 480px;
+        width:100%;
     }
     #third .col-xs-6 {
         float: none;
     }
     .card {
-        margin-left: 20%;
+        margin-left: 12%;
+        margin-top:20px;
+        width: 70%;
     }
     .row {
         margin-left: 0px;
@@ -488,6 +548,22 @@ a:active {
         padding-left: 6%;
 
     }
+    .card2 {
+        text-align: center;
+        margin: 30px;
+        width: 300px;
+        border: 1px solid grey;
+        -webkit-box-shadow: 4px 9px 20px 2px rgba(176, 169, 176, 0.98);
+        box-shadow: 4px 9px 20px 2px grey/*rgba(176,169,176,0.98)*/
+        ;
+        overflow: hidden;
+        -webkit-transition: all 0.4s ease;
+        transition: all 0.4s ease;
+    }
+    .size_extend{
+        width: 300px;
+        height: 350px;
+    }
 }
 
 
@@ -496,11 +572,11 @@ a:active {
     #third .box {
         padding: 10px;
         height: 80px;
-        width: 220%;
+        width: 100%;
         border: 2px solid #a8c0ff;
         font-family: 'Abel';
         color: whitesmoke;
-        background-color: rgb(241, 159, 34);
+        background-color:var(--blue);
         margin-bottom: 10px;
         font-size: 1.5em;
         word-wrap: break-word;
@@ -513,7 +589,7 @@ a:active {
         margin-left: 0;
     }*/
     .box1 {
-        width: 220%;
+        width: 100%;
     }
     #fourth .content h2 {
         margin-top: 10px;

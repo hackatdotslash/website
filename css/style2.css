@@ -325,6 +325,9 @@ p.copy_rights a:hover {
 	.content {
 		padding: 25px 0;
 	}
+	.res{
+		padding: 0px;
+	}
 	.main {
 		margin: 80px auto 74px;
 	}
@@ -353,6 +356,9 @@ p.copy_rights a:hover {
 	body {
 		min-height: 605px;
 	}
+	.res{
+		padding: 0px;
+	}
 }
 
 @media (max-width: 375px) {
@@ -361,6 +367,9 @@ p.copy_rights a:hover {
 	}
 	.subscribe input[type="email"] {
 		width: 64%;
+	}
+	.res{
+		padding: 0px;
 	}
 }
 
@@ -397,6 +406,9 @@ p.copy_rights a:hover {
 	}
 	body {
 		min-height: 484px;
+	}
+	.res{
+		padding: 0px;
 	}
 }
 

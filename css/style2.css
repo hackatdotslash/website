@@ -318,6 +318,7 @@ p.copy_rights a:hover {
 		line-height: 1.8em;
 	}
 	body {
+		width: 100%;
 		min-height: 673px;
 	}
 	/*-- agileits --*/

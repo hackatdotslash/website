@@ -219,6 +219,7 @@ li button {
 
 .seventh {
     height: auto;
+    padding-left: 10%;
 }
 
 iframe {
@@ -539,8 +540,8 @@ a:active {
     .row {
         margin-left: 0px;
     }
-    
-   
+
+
     /*.container{
         padding-left: 5%;
     }*/
@@ -568,7 +569,7 @@ a:active {
 
 
 @media only screen and (max-width:420px)  {
-    
+
     #third .box {
         padding: 10px;
         height: 80px;
@@ -625,7 +626,7 @@ a:active {
 }
 
 @media only screen and (max-width:320px) {
-    
+
     #third .box {
         padding: 10px;
         height: 80px;

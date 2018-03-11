@@ -185,10 +185,10 @@ body {
     border: none;
 }
 .jumbotron button a {
-    font-size: 0.8em;
+    /*font-size: 0.8em;*/
     background-color: transparent;
     border: 3px outset #037BB4;
-    width: 100%;
+    /*width: 100%;*/
 }
 
 li button {
@@ -313,12 +313,12 @@ body {
     border: 2px solid #cfd9df;
     color: whitesmoke;
     background-position: right center;
-    -webkit-box-shadow: inset 5.5em 0 0 0 #FFA500;
-    box-shadow: inset 5.5em 0 0 0 #FFA500;
+    -webkit-box-shadow: inset 5.5em 0 0 0 #1d66af;
+    box-shadow: inset 5.5em 0 0 0 #1d66af;
 }
 .big_size:hover{
-    -webkit-box-shadow: inset 18.5em 0 0 0 #FFA500;
-    box-shadow: inset 18.5em 0 0 0 #FFA500;
+    -webkit-box-shadow: inset 18.5em 0 0 0 #1d66af;
+    box-shadow: inset 18.5em 0 0 0 #1d66af;
 }
 .wrapper {
     display: -webkit-box;
@@ -619,6 +619,9 @@ a:active {
     /*#fourth .container{
         padding-left: 5%;
     }*/
+    .big_size{
+        width: 100px;
+    }
 }
 
 @media only screen and (max-width:320px) {

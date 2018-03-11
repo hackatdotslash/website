@@ -38,37 +38,37 @@ var currentDate = new Date().getTime() / 1000;
               textResponsive: .5,
               days: {
                 gauge: {
-                  thickness: .15,
+                  thickness: .05,
                   bgColor: "rgba(0,0,0,0)",
-                  fgColor: " #F99007",
-                  lineCap: 'round'
+                  fgColor: "#1d66af",
+                  lineCap: 'butt'
                 },
                 textCSS: 'font-weight:300; color:#037AB4;'
               },
               hours: {
                 gauge: {
-                  thickness: .15,
+                  thickness: .05,
                   bgColor: "rgba(0,0,0,0)",
-                  fgColor: " #F99007",
-                  lineCap: 'round'
+                  fgColor: "#1d66af",
+                  lineCap: 'butt'
                 },
                 textCSS: ' font-weight:300; color:#037AB4;'
               },
               minutes: {
                 gauge: {
-                  thickness: .15,
+                  thickness: .05,
                   bgColor: "rgba(0,0,0,0)",
-                  fgColor: " #F99007",
-                  lineCap: 'round'
+                  fgColor: "#1d66af",
+                  lineCap: 'butt'
                 },
                 textCSS: ' font-weight:300; color:#037AB4;'
               },
               seconds: {
                 gauge: {
-                  thickness: .15,
+                  thickness: .05,
                   bgColor: "rgba(0,0,0,0)",
-                  fgColor: "#F99007",
-                  lineCap: 'round'
+                  fgColor: "#1d66af",
+                  lineCap: 'butt'
                 },
                 textCSS: ' font-weight:300; color:#037AB4;'
               }

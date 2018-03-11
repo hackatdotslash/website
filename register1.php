@@ -91,7 +91,7 @@ if (!empty($_POST["register-user"])) {
         <div class="col-md-8 card">
             <div class="row register-header">
                 <h1 class="col-md-12">REGISTRATION FORM</h1>
-                <p class="col-md-12" style="text-align: left; font-size: 15px;"><span style="color: red">*</span> Mendatory Fields</p>
+                <p class="col-md-12" style="text-align: left; font-size: 15px;"><span style="color: red">*</span> Mandatory Fields</p>
             </div>
             <div class="error-text">
                 <?php if(isset($error_message)) echo $error_message; ?>

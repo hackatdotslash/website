@@ -11,7 +11,7 @@ function myFunction() {
 var scene1 = document.getElementById('scene1');
 var parallaxInstance1 = new Parallax(scene1,{
 });
-var hack = new CircleType(document.getElementById('hack_text')).dir(-1).radius(450);
+var hack = new CircleType(document.getElementById('hack_text')).dir(-1).radius(600);
 var currentDate = new Date().getTime() / 1000;
         var futureDate = new Date("April 7, 2018 08:00:00").getTime() / 1000;
 

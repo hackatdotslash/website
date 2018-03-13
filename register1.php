@@ -1,13 +1,7 @@
 <?php
+//phpinfo();
 if (!empty($_POST["register-user"])) {
-    /* Form Required Field Validation */
-    // foreach ($_POST as $key => $value) {
-    //     if (empty($_POST[$key])) {
-    //         $error_message = "All Fields are required";
-    //         break;
-    //     }
-    // }
-
+    
     /* Email Validation */
     if (!isset($error_message)) {
         if (!filter_var($_POST["p1Email"], FILTER_VALIDATE_EMAIL)) {
@@ -15,18 +9,34 @@ if (!empty($_POST["register-user"])) {
         }
     }
 
+    
     /* Validation to check if email taken */
-    // if (!isset($error_message)) {
-    //     require_once("include/config.php");
-    //     $db_handle = new DBController();
-    //     $query = "SELECT teamName FROM registrationNew WHERE p1Email = '".$_POST["p1Email"]."' OR p2Email = '".$_POST["p2Email"]."' OR p3Email = '".$_POST["p3Email"]."'";
-    //     $ifEmailTaken = $db_handle->numRows($query);
-    //     if ($ifEmailTaken>0) {
-    //         $error_message = "The Email is already used!!!";
-    //     }
-    // }
+    if (!isset($error_message)) {
+        require_once("include/config.php");
+        $db_handle = new DBController();
+        $query = "SELECT teamName FROM registrationNew WHERE p1Email = '".$_POST["p1Email"]."' OR p2Email = '".$_POST["p1Email"]."' OR p3Email = '".$_POST["p1Email"]."'";
+        $ifEmailTaken = $db_handle->numRows($query);
+        if ($ifEmailTaken>0) {
+            $error_message = "The Email is already used!!!";
+        }
+    }
 
     if (!isset($error_message)) {
+        require_once "include/recaptchalib.php";
+        
+        $response = null;
+         
+        // check secret key
+        $reCaptcha = new ReCaptcha();
+        if ($_POST["g-recaptcha-response"]) {
+            $response = $reCaptcha->verifyResponse(
+                $_SERVER["REMOTE_ADDR"],
+                $_POST["g-recaptcha-response"]
+            );
+        }
+
+        if ($response != null && $response->success) {
+        //echo "Hi successfully";
         require_once("include/config.php");
         $db_handle = new DBController();
         $query = "INSERT INTO registrationNew (p1Name, p1Email, p1College, p1Gender, p1Dob, p1Contact, p1Github, p1Linkedin, p1Twitter, p1Facebook, newToHackathon, heardAboutHackathon, intrestedInWorkshop, specialNeeds) VALUES
@@ -40,6 +50,10 @@ if (!empty($_POST["register-user"])) {
         } else {
             $error_message = "Problem in registration. Try Again!";
         }
+      } else {
+        $error_message = "Captcha could not be verified!!!";
+      }
+
     }
 }
 ?>
@@ -54,6 +68,7 @@ if (!empty($_POST["register-user"])) {
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.9/validator.min.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <!-- font-->
     <link href="https://fonts.googleapis.com/css?family=Exo+2" rel="stylesheet">
 </head>
@@ -213,12 +228,12 @@ if (!empty($_POST["register-user"])) {
                     </div>
                     <div class="row">
                         <div class="col-md-3 register-field-label">
-                            Facebook Username
+                            Resume Link<span style="color: red">*</span>
                         </div>
                         <div class="col-md-8">
                             <div class="form-group">
                                 <input type="text" class="register" id="p1Facebook" name="p1Facebook" value="<?php if (isset($_POST['p1Facebook'])) echo $_POST['p1Facebook']; ?>"
-                                    >
+                                    required>
                                 <div class="help-block with-errors"></div>
                             </div>
                         </div>
@@ -226,10 +241,10 @@ if (!empty($_POST["register-user"])) {
                     
                 <div class="row">
                     <div class="col-md-3 register-field-label">
-                        Participating for First time in any Hackathon
+                        Participating for First time in any Hackathon<span style="color: red">*</span>
                     </div>
                     <div class="col-md-8 text-left register-radio-button">
-                        <input type="radio" id="newToHackathon" name="newToHackathon" value="Yes" <?php if (isset($_POST[ 'newToHackathon']) && $_POST[
+                        <input type="radio" required id="newToHackathon" name="newToHackathon" value="Yes" <?php if (isset($_POST[ 'newToHackathon']) && $_POST[
                             'newToHackathon']=="Yes" ) { ?>checked
                         <?php } ?>> Yes
                         <input type="radio" id="newToHackathon" name="newToHackathon" value="No" <?php if (isset($_POST[ 'newToHackathon']) && $_POST[
@@ -251,10 +266,10 @@ if (!empty($_POST["register-user"])) {
                 </div>
                 <div class="row">
                     <div class="col-md-3 register-field-label">
-                        Intrested for workshops in Hackathon
+                        Intrested for workshops in Hackathon<span style="color: red">*</span>
                     </div>
                     <div class="col-md-8 text-left register-radio-button">
-                        <input type="radio" id="intrestedInWorkshop" name="intrestedInWorkshop" value="Yes" <?php if (isset($_POST[
+                        <input required type="radio" id="intrestedInWorkshop" name="intrestedInWorkshop" value="Yes" <?php if (isset($_POST[
                             'intrestedInWorkshop']) && $_POST[ 'intrestedInWorkshop']=="Yes" ) { ?>checked
                         <?php } ?>> Yes
                         <input type="radio" id="intrestedInWorkshop" name="intrestedInWorkshop" value="No" <?php if (isset($_POST[
@@ -268,6 +283,13 @@ if (!empty($_POST["register-user"])) {
                     </div>
                     <div class="col-md-8">
                         <input type="textarea" rows="4" cols="50" class="register" id="specialNeeds" name="specialNeeds" value="<?php if (isset($_POST['specialNeeds'])) echo $_POST['specialNeeds']; ?>">
+                    </div>
+                </div>
+                <div class="row">
+                    <BR>
+                    <BR>
+                    <div class="col-md-6 col-md-offset-4 ">
+                        <div class="g-recaptcha" data-sitekey="6LfKaUwUAAAAAGJ-CNKamW5YVBdhAlQjrVEOh4MK"></div>
                     </div>
                 </div>
                 <div class="row">

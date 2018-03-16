@@ -259,6 +259,8 @@ if (!empty($_POST["register-user"])) {
                     <div class="row">
                         <div class="col-md-3 register-field-label">
                             Resume Link<span style="color: red">*</span>
+                            <BR>
+                            <span style="color: red; font-size: 0.7em">(Google drive link or drop box link)</span>
                         </div>
                         <div class="col-md-8">
                             <div class="form-group">
@@ -388,6 +390,8 @@ if (!empty($_POST["register-user"])) {
                 <div class="row">
                     <div class="col-md-3 register-field-label">
                         Resume Link<span style="color: red">*</span>
+                        <BR>
+                            <span style="color: red; font-size: 0.7em">(Google drive link or drop box link)</span>
                     </div>
                     <div class="col-md-8">
                         <div class="form-group">

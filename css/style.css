@@ -236,7 +236,7 @@ iframe {
 }
 
 #footer a {
-    color: #F99007;
+    color: #037BB4;
     text-shadow: 0 0 5px black;
 }
 
@@ -342,7 +342,7 @@ footer {
     background: -webkit-gradient(linear, left bottom, left top, from(#434343), to(#000000));
     background: linear-gradient(to top, #434343, #000000);
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    color: wheat;
+    color:white;
     text-shadow: black 0 0 1px;
 }
 
@@ -409,6 +409,8 @@ a:active {
     color: #3f2b96;
     font-size: 60px;
     font-weight: 600;
+    margin-top:50px;
+    margin-bottom:30px;
 }
 .prize{
     font-family: 'Abel';
@@ -421,6 +423,14 @@ a:active {
     color: #3f2b96;
     font-size: 60px;
     font-weight: 600;
+}
+.sponsor{
+    font-size: 40px;
+    font-weight: 800;
+}
+.timeline{
+    width: 90%;
+    margin-left: -50px;
 }
 @media all and (max-width:768px) {
     #second h3 {
@@ -501,6 +511,10 @@ a:active {
     ul li:hover {
         background: rgba(63, 228, 198, 0.712);
     }
+    .timeline{
+        width: 100%;
+        margin-left:-10px;
+    }
 }
 
 @media only screen and (max-width:992px) and (min-width: 768px) {
@@ -565,6 +579,10 @@ a:active {
         width: 300px;
         height: 350px;
     }
+    .timeline{
+        width: 100%;
+        margin-left:0;
+    }
 }
 
 
@@ -622,6 +640,11 @@ a:active {
     }*/
     .big_size{
         width: 100px;
+    }
+    .timeline{
+        margin-left:-15px;
+        transform: scale(1.2);
+        
     }
 }
 

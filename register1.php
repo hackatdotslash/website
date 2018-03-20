@@ -103,7 +103,7 @@ if (!empty($_POST["register-user"])) {
 <div class="container-width">
     <div class="row">
         <div class="col-md-2 col-lg-2 col-sm-0 col-xs-0"></div>
-        <div class="col-md-8 col-lg-8 col-sm-12 col-xs-12 card">
+        <div class="col-md-8 col-lg-8 col-sm-11 col-xs-11 card">
             <div class="row register-header">
                 <h1 class="col-md-12">REGISTRATION FORM</h1>
                 <p class="col-md-12" style="text-align: left; font-size: 15px;"><span style="color: red">*</span> Mandatory Fields</p>
